@@ -3,11 +3,13 @@ import java.awt.event.*;
 import java.util.Random;
 
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class main extends JFrame implements ActionListener {
-		
+	
+	static int stepCount = 0;
 	static main frame_page1 = new main();
 	
 	static JPanel p1 = new JPanel();
@@ -30,9 +32,42 @@ public class main extends JFrame implements ActionListener {
 	//第一頁
 	static TextField nameTextField = new TextField("王大明");
 	static TextField numberTextField = new TextField("1021234");
-
-	static int stepCount = 0;
 	
+	//第二頁
+	static Label ChineseLab1 = new Label("中文(上)");
+	static Label ChineseLab2 = new Label("中文(下)");
+	static Label EnglishLab1 = new Label("大一英文(上)");
+	static Label EnglishLab2 = new Label("大一英文(下)");
+	static Label English2Lab1 = new Label("大二英文(上)");
+	static Label English2Lab2 = new Label("大二英文(下)");
+	static Label HistoryLab = new Label("歷史課程");
+	static Label SocialLab = new Label("公民文化");
+	static TextField ChineseTextField1 = new TextField("60");
+	static TextField ChineseTextField2 = new TextField("60");
+	static TextField EnglishTextField1 = new TextField("60");
+	static TextField EnglishTextField2 = new TextField("60");
+	static TextField English2TextField1 = new TextField("60");
+	static TextField English2TextField2 = new TextField("60");
+	static TextField HistoryTextField = new TextField("60");
+	static TextField SocialTextField = new TextField("60");
+	
+	//第三頁
+	static JComboBox selectBox1 = new JComboBox();
+	static JComboBox selectBox2 = new JComboBox(); 
+	static JComboBox selectBox3 = new JComboBox(); 
+	static JComboBox selectBox4 = new JComboBox(); 
+	static JComboBox selectBox5 = new JComboBox(); 
+	static JComboBox selectBox6 = new JComboBox(); 
+	static JComboBox selectBox7 = new JComboBox(); 
+	static TextField GeneralCourse1 = new TextField("60");
+	static TextField GeneralCourse2 = new TextField("60");
+	static TextField GeneralCourse3 = new TextField("60");
+	static TextField GeneralCourse4 = new TextField("60");
+	static TextField GeneralCourse5 = new TextField("60");
+	static TextField GeneralCourse6 = new TextField("60");
+	static TextField GeneralCourse7 = new TextField("60");
+	
+	//第一步驟頁面
 	public static void main(String args[])
 	{
 		CheckboxGroup ckbGrp = new CheckboxGroup();
@@ -49,18 +84,15 @@ public class main extends JFrame implements ActionListener {
 		
 		p1.add(nameTextField);
 		p1.add(numberTextField);
-		
 		p1.add(ckbSOFT);
 		p1.add(ckbELEC);
 		p1.add(ckbMEDI);
-		
 		p1.add(nextBtn1);
 		
 		p1.setVisible(true);
 		frame_page1.add(p1);
 		frame_page1.setVisible(true);
 	}
-
 	//基礎必修
 	public static void firstStep(String[] args) {
 		stepCount = 1;
@@ -68,12 +100,28 @@ public class main extends JFrame implements ActionListener {
 		p2.setVisible(true);
 		p1.setVisible(false);
 		
+		p2.add(ChineseLab1);
+		p2.add(ChineseTextField1);
+		p2.add(ChineseLab2);
+		p2.add(ChineseTextField2);
+		p2.add(EnglishLab1);
+		p2.add(EnglishTextField1);
+		p2.add(EnglishLab2);
+		p2.add(EnglishTextField2);
+		p2.add(English2Lab1);
+		p2.add(English2TextField1);
+		p2.add(English2Lab2);
+		p2.add(English2TextField2);
+		p2.add(HistoryLab);
+		p2.add(HistoryTextField);
+		p2.add(SocialLab);
+		p2.add(SocialTextField);
+		
 		p2.add(nextBtn2);
 		nextBtn2.addActionListener(frame_page1);
 		frame_page1.add(p2);
 		frame_page1.setVisible(true);
 	}
-	
 	//通識課程
 	public static void secondStep(String[] args) {
 		stepCount = 2;
@@ -81,12 +129,37 @@ public class main extends JFrame implements ActionListener {
 		p3.setVisible(true);
 		p2.setVisible(false);
 		
+		String str[]={"請點選領域", "人文學科", "社會學科", "自然學科", "文明與經典領域學科"} ;  
+		for(int i=0; i < str.length; i++)
+		{
+			selectBox1.addItem(str[i]);
+			selectBox2.addItem(str[i]);
+			selectBox3.addItem(str[i]);
+			selectBox4.addItem(str[i]);
+			selectBox5.addItem(str[i]);
+			selectBox6.addItem(str[i]);
+			selectBox7.addItem(str[i]);
+		} 
+		p3.add(selectBox1);
+		p3.add(GeneralCourse1);
+		p3.add(selectBox2);
+		p3.add(GeneralCourse2);
+		p3.add(selectBox3);
+		p3.add(GeneralCourse3);
+		p3.add(selectBox4);
+		p3.add(GeneralCourse4);
+		p3.add(selectBox5);
+		p3.add(GeneralCourse5);
+		p3.add(selectBox6);
+		p3.add(GeneralCourse6);
+		p3.add(selectBox7);
+		p3.add(GeneralCourse7);
 		p3.add(nextBtn3);
+		
 		nextBtn3.addActionListener(frame_page1);
 		frame_page1.add(p3);
 		frame_page1.setVisible(true);
 	}
-
 	//軟工組必修必選
 	public static void thirdStepSOFT(String[] args) {
 		stepCount = 3;
