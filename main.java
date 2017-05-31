@@ -67,6 +67,51 @@ public class main extends JFrame implements ActionListener {
 	static TextField GeneralCourse6 = new TextField("60");
 	static TextField GeneralCourse7 = new TextField("60");
 	
+	//必修必選
+	static Label CalculusLab1 = new Label("微積分(上)");
+	static Label CalculusLab2 = new Label("微積分(下)");
+	static Label PhysicsLab = new Label("普通物理");
+	static Label BCCLab = new Label("計算機概論");
+	static Label CProgrammingLab = new Label("C 程式設計");
+	static TextField CalculusTextField1 = new TextField("60");
+	static TextField CalculusTextField2 = new TextField("60");
+	static TextField PhysicsTextField = new TextField("60");
+	static TextField BCCTextField = new TextField("60");
+	static TextField CProgrammingTextField = new TextField("60");
+	
+	static Label SoftwareLab = new Label("軟體工程概論");
+	static Label DataStructureLab = new Label("資料結構");
+	static Label DiscreteLab = new Label("離散數學");
+	static Label ElectricLab = new Label("電子電路學");
+	static Label ElectriclabLab = new Label("電子電路學實驗");
+	static Label SystemAssemblyLab = new Label("系統程式與組合語言");
+	static Label ProbabilityLab = new Label("機率統計");
+	static Label LinearAlgebraLab = new Label("線性代數");
+	static Label ProgrammingLanguageLab = new Label("程式語言");
+	static Label ComputerOrganLab = new Label("計算機組織");
+	static Label ComputerInternetLab = new Label("計算機網路");
+	static Label AlgorithmLab = new Label("演算法");
+	static Label OSLab = new Label("作業系統");
+	static Label FinalProgramLab = new Label("專題實作");
+	static TextField SoftwareTextField = new TextField("60");
+	static TextField DataStructureTextField = new TextField("60");
+	static TextField DiscreteTextField = new TextField("60");
+	static TextField ElectricTextField = new TextField("60");
+	static TextField ElectriclabTextField = new TextField("60");
+	static TextField SystemAssemblyTextField = new TextField("60");
+	static TextField ProbabilityTextField = new TextField("60");
+	static TextField LinearAlgebraTextField = new TextField("60");
+	static TextField ProgrammingLanguageTextField = new TextField("60");
+	static TextField ComputerOrganTextField = new TextField("60");
+	static TextField ComputerInternetTextField = new TextField("60");
+	static TextField AlgorithmTextField = new TextField("60");
+	static TextField OSTextField = new TextField("60");
+	static TextField FinalProgramTextField = new TextField("60");
+	
+	//必修必選(SOFT)
+	//必修必選(ELEC)
+	//必修必選(MEDI)
+	
 	//第一步驟頁面
 	public static void main(String args[])
 	{
@@ -163,11 +208,53 @@ public class main extends JFrame implements ActionListener {
 	//軟工組必修必選
 	public static void thirdStepSOFT(String[] args) {
 		stepCount = 3;
-		
 		p4.setVisible(true);
 		p3.setVisible(false);
 		
+		Label title = new Label("軟工組");
+		p4.add(title);
+		
+		p4.add(CalculusLab1);
+		p4.add(CalculusTextField1);
+		p4.add(CalculusLab2);
+		p4.add(CalculusTextField2);
+		p4.add(PhysicsLab);
+		p4.add(PhysicsTextField);
+		p4.add(BCCLab);
+		p4.add(BCCTextField);
+		p4.add(CProgrammingLab);
+		p4.add(CProgrammingTextField);
+		
+		p4.add(SoftwareLab);
+		p4.add(SoftwareTextField);
+		p4.add(DataStructureLab);
+		p4.add(DataStructureTextField);
+		p4.add(DiscreteLab);
+		p4.add(DiscreteTextField);
+		p4.add(ElectricLab);
+		p4.add(ElectricTextField);
+		p4.add(ElectriclabLab);
+		p4.add(ElectriclabTextField);
+		p4.add(SystemAssemblyLab);
+		p4.add(SystemAssemblyTextField);
+		p4.add(ProbabilityLab);
+		p4.add(ProbabilityTextField);
+		p4.add(LinearAlgebraLab);
+		p4.add(LinearAlgebraTextField);
+		p4.add(ProgrammingLanguageLab);
+		p4.add(ProgrammingLanguageTextField);
+		p4.add(ComputerOrganLab);
+		p4.add(ComputerOrganTextField);
+		p4.add(ComputerInternetLab);
+		p4.add(ComputerInternetTextField);
+		p4.add(AlgorithmLab);
+		p4.add(AlgorithmTextField);
+		p4.add(OSLab);
+		p4.add(OSTextField);
+		p4.add(FinalProgramLab);
+		p4.add(FinalProgramTextField);
 		p4.add(nextBtn4);
+		
 		nextBtn4.addActionListener(frame_page1);
 		frame_page1.add(p4);
 		frame_page1.setVisible(true);
@@ -175,9 +262,23 @@ public class main extends JFrame implements ActionListener {
 	//資電組必修必選
 	public static void thirdStepELEC(String[] args) {
 		stepCount = 3;
-		
 		p4.setVisible(true);
 		p3.setVisible(false);
+		
+		Label title = new Label("資電組");
+		p4.add(title);
+		
+		p4.add(CalculusLab1);
+		p4.add(CalculusTextField1);
+		p4.add(CalculusLab2);
+		p4.add(CalculusTextField2);
+		p4.add(PhysicsLab);
+		p4.add(PhysicsTextField);
+		p4.add(BCCLab);
+		p4.add(BCCTextField);
+		p4.add(CProgrammingLab);
+		p4.add(CProgrammingTextField);
+		
 		p4.add(nextBtn4);
 		nextBtn4.addActionListener(frame_page1);
 		frame_page1.add(p4);
@@ -186,9 +287,21 @@ public class main extends JFrame implements ActionListener {
 	//數創組必修必選
 	public static void thirdStepMEDI(String[] args) {
 		stepCount = 3;
-		
 		p4.setVisible(true);
 		p3.setVisible(false);
+		Label title = new Label("數創組");
+		p4.add(title);
+		
+		p4.add(CalculusLab1);
+		p4.add(CalculusTextField1);
+		p4.add(CalculusLab2);
+		p4.add(CalculusTextField2);
+		p4.add(PhysicsLab);
+		p4.add(PhysicsTextField);
+		p4.add(BCCLab);
+		p4.add(BCCTextField);
+		p4.add(CProgrammingLab);
+		p4.add(CProgrammingTextField);
 		
 		p4.add(nextBtn4);
 		nextBtn4.addActionListener(frame_page1);
