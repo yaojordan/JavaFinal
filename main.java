@@ -30,8 +30,8 @@ public class main extends JFrame implements ActionListener {
 	static Checkbox ckbMEDI = new Checkbox("數創組");
 	
 	//第一頁
-	static TextField nameTextField = new TextField("姓名...");
-	static TextField numberTextField = new TextField("學號...");
+	static TextField nameTextField = new TextField("");
+	static TextField numberTextField = new TextField("");
 	
 	//第二頁
 	static Label ChineseLab1 = new Label("中文(上)");
@@ -198,10 +198,23 @@ public class main extends JFrame implements ActionListener {
 	public static void main(String args[])
 	{
 		CheckboxGroup ckbGrp = new CheckboxGroup();
+		Label lab1 = new Label("姓名：");
+		Label lab2 = new Label("學號：");
 		frame_page1.setSize(600,500);
-
-		nextBtn1.addActionListener(frame_page1);
 		
+		p1.setLayout(null);//要自定義排版, 因此先設定布局為null
+		
+		lab1.setBounds(210, 120, 50, 20);
+		nameTextField.setBounds(270,120,100,20);
+		lab2.setBounds(210, 165, 50, 20);
+		numberTextField.setBounds(270, 165, 100, 20);
+		ckbSOFT.setBounds(270, 210, 50, 20);
+		ckbELEC.setBounds(270, 240, 50, 20);
+		ckbMEDI.setBounds(270, 270, 50, 20);
+		nextBtn1.setBounds(475, 400, 80, 30);
+		
+		nextBtn1.addActionListener(frame_page1);
+			
 		//組別三選一
 		ckbSOFT.setCheckboxGroup(ckbGrp);
 		ckbELEC.setCheckboxGroup(ckbGrp);
@@ -209,6 +222,8 @@ public class main extends JFrame implements ActionListener {
 		//預設選取軟工組
 		ckbSOFT.setState(true);
 		
+		p1.add(lab1);
+		p1.add(lab2);
 		p1.add(nameTextField);
 		p1.add(numberTextField);
 		p1.add(ckbSOFT);
@@ -223,10 +238,34 @@ public class main extends JFrame implements ActionListener {
 	//基礎必修
 	public static void firstStep(String[] args) {
 		stepCount = 1;
-		
+		//GridLayout grid = new GridLayout(6,3);
+		//p2.setLayout(grid);
+		Label lab1 = new Label("基礎必修課程");
 		p2.setVisible(true);
 		p1.setVisible(false);
+		p2.setLayout(null);
 		
+		lab1.setBounds(230, 30, 50, 20);
+		ChineseLab1.setBounds(210, 80, 50, 20);
+		ChineseTextField1.setBounds(270,80,30,20);
+		ChineseLab2.setBounds(210, 110, 50, 20);
+		ChineseTextField2.setBounds(270, 110, 30, 20);
+		
+		EnglishLab1.setBounds(210, 140, 100, 20);
+		EnglishTextField1.setBounds(310, 140, 30, 20);
+		EnglishLab2.setBounds(210, 170, 100, 20);
+		EnglishTextField2.setBounds(310, 170, 30, 20);
+		English2Lab1.setBounds(210, 200, 100, 20);
+		English2TextField1.setBounds(310, 200, 30, 20);
+		English2Lab2.setBounds(210, 230, 100, 20);
+		English2TextField2.setBounds(310, 230, 30, 20);
+		HistoryLab.setBounds(210, 260, 100, 20);
+		HistoryTextField.setBounds(310, 260, 30, 20);
+		SocialLab.setBounds(210, 290, 100, 20);
+		SocialTextField.setBounds(310, 290, 30, 20);
+		nextBtn2.setBounds(475, 400, 80, 30);
+		
+		p2.add(lab1);
 		p2.add(ChineseLab1);
 		p2.add(ChineseTextField1);
 		p2.add(ChineseLab2);
@@ -252,10 +291,27 @@ public class main extends JFrame implements ActionListener {
 	//通識課程
 	public static void secondStep(String[] args) {
 		stepCount = 2;
-		
+		Label lab1 = new Label("通識課程");
 		p3.setVisible(true);
 		p2.setVisible(false);
+		p3.setLayout(null);
 		
+		lab1.setBounds(230, 30, 50, 20);
+		selectBox1.setBounds(210, 80, 100, 20);
+		GeneralCourse1.setBounds(320, 80, 30, 20);
+		selectBox2.setBounds(210, 110, 100, 20);
+		GeneralCourse2.setBounds(320, 110, 30, 20);
+		selectBox3.setBounds(210, 140, 100, 20);
+		GeneralCourse3.setBounds(320, 140, 30, 20);
+		selectBox4.setBounds(210, 170, 100, 20);
+		GeneralCourse4.setBounds(320, 170, 30, 20);
+		selectBox5.setBounds(210, 200, 100, 20);
+		GeneralCourse5.setBounds(320, 200, 30, 20);
+		selectBox6.setBounds(210, 230, 100, 20);
+		GeneralCourse6.setBounds(320, 230, 30, 20);
+		selectBox7.setBounds(210, 260, 100, 20);
+		GeneralCourse7.setBounds(320, 260, 30, 20);
+		nextBtn3.setBounds(475, 400, 80, 30);
 		String str[]={"請點選領域", "人文學科", "社會學科", "自然學科", "文明與經典領域學科"} ;  
 		for(int i=0; i < str.length; i++)
 		{
@@ -267,6 +323,7 @@ public class main extends JFrame implements ActionListener {
 			selectBox6.addItem(str[i]);
 			selectBox7.addItem(str[i]);
 		} 
+		p3.add(lab1);
 		p3.add(selectBox1);
 		p3.add(GeneralCourse1);
 		p3.add(selectBox2);
