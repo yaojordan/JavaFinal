@@ -20,9 +20,9 @@ public class main extends JFrame implements ActionListener {
 	static JPanel p6 = new JPanel();
 	
 	static JButton nextBtn1 = new JButton("下一步"); 
-	static JButton nextBtn2 = new JButton("下一步2"); 
-	static JButton nextBtn3 = new JButton("下一步3"); 
-	static JButton nextBtn4 = new JButton("下一步4"); 
+	static JButton nextBtn2 = new JButton("下一步"); 
+	static JButton nextBtn3 = new JButton("下一步"); 
+	static JButton nextBtn4 = new JButton("下一步"); 
 	static JButton nextBtn5 = new JButton("完成"); 
 	
 	static Checkbox ckbSOFT = new Checkbox("軟工組");
@@ -30,8 +30,8 @@ public class main extends JFrame implements ActionListener {
 	static Checkbox ckbMEDI = new Checkbox("數創組");
 	
 	//第一頁
-	static TextField nameTextField = new TextField("王大明");
-	static TextField numberTextField = new TextField("1021234");
+	static TextField nameTextField = new TextField("姓名...");
+	static TextField numberTextField = new TextField("學號...");
 	
 	//第二頁
 	static Label ChineseLab1 = new Label("中文(上)");
@@ -108,9 +108,91 @@ public class main extends JFrame implements ActionListener {
 	static TextField OSTextField = new TextField("60");
 	static TextField FinalProgramTextField = new TextField("60");
 	
-	//必修必選(SOFT)
-	//必修必選(ELEC)
+	static Label JavaLab = new Label("JAVA 程式設計");
+	static Label TechEngLab = new Label("科技英文閱讀寫作");
+	static Label OOPLab = new Label("物件導向程式設計");
+	static Label LogicLab = new Label("邏輯設計");
+	static Label LogiclabLab = new Label("邏輯設計實驗");
+	static Label DatabaseLab = new Label("資料庫");
+	static Label SoftTestLab = new Label("軟體測試與驗證");
+	static Label FinalProgram1Lab = new Label("專題研究");
+	static Label CompilerLab = new Label("編譯器");
+	static TextField JavaTextField = new TextField("60");
+	static TextField TechEngTextField = new TextField("60");
+	static TextField OOPTextField = new TextField("60");
+	static TextField LogicTextField = new TextField("60");
+	static TextField LogiclabTextField = new TextField("60");
+	static TextField DatabaseTextField = new TextField("60");
+	static TextField SoftTestTextField = new TextField("60");
+	static TextField FinalProgram1TextField = new TextField("60");
+	static TextField CompilerTextField = new TextField("60");
+	
+	static Label OOPDLab = new Label("物件導向分析與設計");
+	static Label SMLab = new Label("軟體專案管理");//MEDI
+	static Label WebPLab = new Label("WEB程式設計");//ELEC,MEDI
+	static Label UXLab = new Label("使用者經驗");//MEDI
+	static Label ADSLab = new Label("進階資料結構");//ELEC,MEDI
+	static Label SLCLab = new Label("軟體生命週期管理");
+	static Label UILab = new Label("人機介面設計");//ELEC,MEDI
+	static Label SSLab = new Label("軟體架構");
+	static Label CCLab = new Label("雲端計算");//ELEC,MEDI
+	static TextField OOPDTextField = new TextField("0");
+	static TextField SMLTextField = new TextField("0");
+	static TextField WebPTextField = new TextField("0");
+	static TextField UXTextField = new TextField("0");
+	static TextField ADSTextField = new TextField("0");
+	static TextField SLCTextField = new TextField("0");
+	static TextField UITextField = new TextField("0");
+	static TextField SSTextField = new TextField("0");
+	static TextField CCTextField = new TextField("0");
+	
+	static Label ALogicLab = new Label("進階邏輯設計");
+	static Label WifiLab = new Label("無線感測網路");//MEDI
+	static Label VLSILab = new Label("VLSI設計導論");
+	static Label EmbLab = new Label("嵌入式系統設計與實作");
+	static Label SignalLab = new Label("數位訊號處理導論");
+	static TextField ALogicTextField = new TextField("0");
+	static TextField WifiTextField = new TextField("0");
+	static TextField VLSITextField = new TextField("0");
+	static TextField EmbTextField = new TextField("0");
+	static TextField SignalTextField = new TextField("0");
+
+	
+	static Label CreativeLab = new Label("服務創新");
+	static Label SocialNetLab = new Label("社群網路");
+	static Label VideoLab = new Label("影像視訊處理應用");
+	static TextField CreativeTextField = new TextField("0");
+	static TextField SocialNetTextField = new TextField("0");
+	static TextField VideoTextField = new TextField("0");
+
+	
 	//必修必選(MEDI)
+	static Label DigitalCreativeLab = new Label("數位創新導論");
+	static Label CreativeTendLab = new Label("創意設計趨勢與方法");
+	static Label InternetCreativeLab = new Label("網際網路創新應用");
+	static Label CreativeMathLab = new Label("創意數學");
+	static Label InteractionDesignLab = new Label("資訊美學與互動設計");
+	static Label DigitalMaterialLab = new Label("數位創意材料");
+	static Label DigitalMediLab = new Label("數位多媒體");
+	static Label EmbeddedSystemLab = new Label("嵌入式系統導論");//必修必選(ELEC)
+	static Label ProtableDeviceLab = new Label("行動裝置系統與應用");//ELEC
+	static TextField DigitalCreativeTextField = new TextField("60");
+	static TextField CreativeTendTextField = new TextField("60");
+	static TextField InternetCreativeTextField = new TextField("60");
+	static TextField CreativeMathTextField = new TextField("60");
+	static TextField InteractionDesignTextField = new TextField("60");
+	static TextField DigitalMaterialTextField = new TextField("60");
+	static TextField DigitalMediTextField = new TextField("60");
+	static TextField EmbeddedSystemTextField = new TextField("60");
+	static TextField ProtableDeviceTextField = new TextField("60");
+	
+	//必修必選(ELEC)
+	static Label HardwareLab = new Label("硬體描述語言設計與模擬");
+	static TextField HardwareTextField = new TextField("60");
+	static Label MicroProcessorLab = new Label("微算機系統");
+	static TextField MicroProcessorTextField = new TextField("60");
+	static Label MicroProcessorlabLab = new Label("微算機系統實驗");
+	static TextField MicroProcessorlabTextField = new TextField("60");
 	
 	//第一步驟頁面
 	public static void main(String args[])
@@ -251,8 +333,29 @@ public class main extends JFrame implements ActionListener {
 		p4.add(AlgorithmTextField);
 		p4.add(OSLab);
 		p4.add(OSTextField);
+		
+		p4.add(JavaLab);
+		p4.add(JavaTextField);
+		p4.add(TechEngLab);
+		p4.add(TechEngTextField);
+		p4.add(OOPLab);
+		p4.add(OOPTextField);
+		p4.add(LogicLab);
+		p4.add(LogicTextField);
+		p4.add(LogiclabLab);
+		p4.add(LogiclabTextField);
+		p4.add(DatabaseLab);
+		p4.add(DatabaseTextField);
+		p4.add(SoftTestLab);
+		p4.add(SoftTestTextField);
+		p4.add(CompilerLab);
+		p4.add(CompilerTextField);
+		p4.add(FinalProgram1Lab);
+		p4.add(FinalProgram1TextField);
 		p4.add(FinalProgramLab);
 		p4.add(FinalProgramTextField);
+		
+
 		p4.add(nextBtn4);
 		
 		nextBtn4.addActionListener(frame_page1);
@@ -279,6 +382,57 @@ public class main extends JFrame implements ActionListener {
 		p4.add(CProgrammingLab);
 		p4.add(CProgrammingTextField);
 		
+		p4.add(ElectricLab);
+		p4.add(ElectricTextField);
+		p4.add(ElectriclabLab);
+		p4.add(ElectriclabTextField);
+		p4.add(DataStructureLab);
+		p4.add(DataStructureTextField);
+		p4.add(DiscreteLab);
+		p4.add(DiscreteTextField);
+		p4.add(LogicLab);
+		p4.add(LogicTextField);
+		p4.add(LogiclabLab);
+		p4.add(LogiclabTextField);
+		p4.add(EmbeddedSystemLab);
+		p4.add(EmbeddedSystemTextField);
+		p4.add(SystemAssemblyLab);
+		p4.add(SystemAssemblyTextField);
+		p4.add(ProbabilityLab);
+		p4.add(ProbabilityTextField);
+		p4.add(LinearAlgebraLab);
+		p4.add(LinearAlgebraTextField);
+		p4.add(HardwareLab);
+		p4.add(HardwareTextField);
+		p4.add(ComputerOrganLab);
+		p4.add(ComputerOrganTextField);
+		p4.add(ComputerInternetLab);
+		p4.add(ComputerInternetTextField);
+		p4.add(AlgorithmLab);
+		p4.add(AlgorithmTextField);
+		p4.add(OSLab);
+		p4.add(OSTextField);
+		
+		p4.add(JavaLab);
+		p4.add(JavaTextField);
+		p4.add(TechEngLab);
+		p4.add(TechEngTextField);
+		p4.add(ProgrammingLanguageLab);
+		p4.add(ProgrammingLanguageTextField);
+		p4.add(DatabaseLab);
+		p4.add(DatabaseTextField);
+		p4.add(MicroProcessorLab);
+		p4.add(MicroProcessorTextField);
+		p4.add(MicroProcessorlabLab);
+		p4.add(MicroProcessorlabTextField);
+		p4.add(CompilerLab);
+		p4.add(CompilerTextField);
+		p4.add(FinalProgram1Lab);
+		p4.add(FinalProgram1TextField);
+		p4.add(FinalProgramLab);
+		p4.add(FinalProgramTextField);
+		
+		
 		p4.add(nextBtn4);
 		nextBtn4.addActionListener(frame_page1);
 		frame_page1.add(p4);
@@ -302,19 +456,99 @@ public class main extends JFrame implements ActionListener {
 		p4.add(BCCTextField);
 		p4.add(CProgrammingLab);
 		p4.add(CProgrammingTextField);
+		p4.add(DigitalCreativeLab);
+		p4.add(DigitalCreativeTextField);
+		p4.add(JavaLab);
+		p4.add(JavaTextField);
+		p4.add(DataStructureLab);
+		p4.add(DataStructureTextField);
+		p4.add(CreativeTendLab);
+		p4.add(CreativeTendTextField);
+		p4.add(InternetCreativeLab);
+		p4.add(InternetCreativeTextField);
+		p4.add(CreativeMathLab);
+		p4.add(CreativeMathTextField);
+		p4.add(InteractionDesignLab);
+		p4.add(InteractionDesignTextField);
+		p4.add(DigitalMaterialLab);
+		p4.add(DigitalMaterialTextField);
+		p4.add(DigitalMediLab);
+		p4.add(DigitalMediTextField);
+		p4.add(ComputerInternetLab);
+		p4.add(ComputerInternetTextField);
+		p4.add(AlgorithmLab);
+		p4.add(AlgorithmTextField);
+		p4.add(OSLab);
+		p4.add(OSTextField);
+		
+		p4.add(TechEngLab);
+		p4.add(TechEngTextField);
+		p4.add(EmbeddedSystemLab);
+		p4.add(EmbeddedSystemTextField);
+		p4.add(ProtableDeviceLab);
+		p4.add(ProtableDeviceTextField);
+		p4.add(DatabaseLab);
+		p4.add(DatabaseTextField);
+		p4.add(MicroProcessorLab);
+		p4.add(MicroProcessorTextField);
+		p4.add(MicroProcessorlabLab);
+		p4.add(MicroProcessorlabTextField);
+		p4.add(FinalProgram1Lab);
+		p4.add(FinalProgram1TextField);
+		p4.add(FinalProgramLab);
+		p4.add(FinalProgramTextField);
 		
 		p4.add(nextBtn4);
 		nextBtn4.addActionListener(frame_page1);
 		frame_page1.add(p4);
 		frame_page1.setVisible(true);
 	}
-	
+
 	//所有選修課程
 	public static void finalStep(String[] args) {
 		stepCount = 4;
 		
 		p5.setVisible(true);
 		p4.setVisible(false);
+		
+		p5.add(OOPDLab);
+		p5.add(OOPDTextField);
+		p5.add(SMLab);
+		p5.add(SMLTextField);
+		p5.add(WebPLab);
+		p5.add(WebPTextField);
+		p5.add(UXLab);
+		p5.add(UXTextField);
+		p5.add(ADSLab);
+		p5.add(ADSTextField);
+		p5.add(SLCLab);
+		p5.add(SLCTextField);
+		p5.add(UILab);
+		p5.add(UITextField);
+		p5.add(SSLab);
+		p5.add(SSTextField);
+		p5.add(CCLab);
+		p5.add(CCTextField);
+		
+		p5.add(ProtableDeviceLab);
+		p5.add(ProtableDeviceTextField);
+		p5.add(ALogicLab);
+		p5.add(ALogicTextField);
+		p5.add(WifiLab);
+		p5.add(WifiTextField);
+		p5.add(VLSILab);
+		p5.add(VLSITextField);
+		p5.add(EmbLab);
+		p5.add(EmbTextField);
+		p5.add(SignalLab);
+		p5.add(SignalTextField);
+		
+		p5.add(CreativeLab);
+		p5.add(CreativeTextField);
+		p5.add(SocialNetLab);
+		p5.add(SocialNetTextField);
+		p5.add(VideoLab);
+		p5.add(VideoTextField);
 		
 		p5.add(nextBtn5);
 		nextBtn5.addActionListener(frame_page1);
