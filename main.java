@@ -295,36 +295,7 @@ public class main extends JFrame implements ActionListener {
 		p2.add(SocialTextField);
 		p2.add(nextBtn2);
 		
-		//計算區塊
-		Integer Chinese1 =  Integer.parseInt(ChineseTextField1.getText());
-		Integer Chinese2 =  Integer.parseInt(ChineseTextField2.getText());
-		Integer English1 =  Integer.parseInt(EnglishTextField1.getText());
-		Integer English2 =  Integer.parseInt(EnglishTextField2.getText());
-		Integer English21 =  Integer.parseInt(English2TextField1.getText());
-		Integer English22 =  Integer.parseInt(English2TextField2.getText());
-		Integer History =  Integer.parseInt(HistoryTextField.getText());
-		Integer Social =  Integer.parseInt(SocialTextField.getText());
 		
-		if(Chinese1 >= 60)
-			point += 2;
-		if(Chinese2 >= 60)
-			point += 2;
-		if(English1 >= 60)
-			point += 2;
-		if(English2 >= 60)
-			point += 2;
-		if(English21 >= 60)
-			point += 1;
-		if(English22 >= 60)
-			point += 1;
-		if(History >= 60)
-			point += 2;
-		if(Social >= 60)
-			point += 2;
-		
-		gradeCounter = Chinese1 + Chinese2 + English1 + English2 + English21 + English22 + History + Social;
-		//System.out.print(point);
-		//
 		
 		nextBtn2.addActionListener(frame_page1);
 		frame_page1.add(p2);
@@ -382,31 +353,6 @@ public class main extends JFrame implements ActionListener {
 		p3.add(GeneralCourse7);
 		p3.add(nextBtn3);
 		
-		//計算區塊
-		Integer Course1 =  Integer.parseInt(GeneralCourse1.getText());
-		Integer Course2 =  Integer.parseInt(GeneralCourse2.getText());
-		Integer Course3 =  Integer.parseInt(GeneralCourse3.getText());
-		Integer Course4 =  Integer.parseInt(GeneralCourse4.getText());
-		Integer Course5 =  Integer.parseInt(GeneralCourse5.getText());
-		Integer Course6 =  Integer.parseInt(GeneralCourse6.getText());
-		Integer Course7 =  Integer.parseInt(GeneralCourse7.getText());
-		if(Course1 >= 60)
-			point += 2;
-		if(Course2 >= 60)
-			point += 2;
-		if(Course3 >= 60)
-			point += 2;
-		if(Course4 >= 60)
-			point += 2;
-		if(Course5 >= 60)
-			point += 1;
-		if(Course6 >= 60)
-			point += 1;
-		if(Course7 >= 60)
-			point += 2;
-
-		gradeCounter += Course1 + Course2 + Course3 + Course4 + Course5 + Course6 + Course7;
-		//
 		
 		nextBtn3.addActionListener(frame_page1);
 		frame_page1.add(p3);
@@ -448,6 +394,7 @@ public class main extends JFrame implements ActionListener {
 		p4.add(CProgrammingTextField);
 		p4.add(SoftwareLab);
 		p4.add(SoftwareTextField);
+
 		
 		DataStructureLab.setBounds(200, 80, 100, 20);
 		DataStructureTextField.setBounds(300, 80, 30, 20);
@@ -490,6 +437,7 @@ public class main extends JFrame implements ActionListener {
 		p4.add(ProgrammingLanguageLab);
 		p4.add(ProgrammingLanguageTextField);
 		
+		
 		ComputerOrganLab.setBounds(380, 80, 100, 20);
 		ComputerOrganTextField.setBounds(480, 80, 30, 20);
 		ComputerInternetLab.setBounds(380, 110, 100, 20);
@@ -516,7 +464,7 @@ public class main extends JFrame implements ActionListener {
 		p4.add(AlgorithmTextField);
 		p4.add(OSLab);
 		p4.add(OSTextField);
-		
+	
 		
 		p4.add(JavaLab);
 		p4.add(JavaTextField);
@@ -538,6 +486,7 @@ public class main extends JFrame implements ActionListener {
 		p4.add(FinalProgram1TextField);
 		p4.add(FinalProgramLab);
 		p4.add(FinalProgramTextField);
+		
 		
 		nextBtn4.setBounds(475, 400, 80, 30);
 		p4.add(nextBtn4);
@@ -896,6 +845,172 @@ public class main extends JFrame implements ActionListener {
 		frame_page1.setVisible(true);
 	}
 	
+	public static void CalculatefirstStep(String[] args) {
+		//計算區塊
+				Integer Chinese1 =  Integer.parseInt(ChineseTextField1.getText());
+				Integer Chinese2 =  Integer.parseInt(ChineseTextField2.getText());
+				Integer English1 =  Integer.parseInt(EnglishTextField1.getText());
+				Integer English2 =  Integer.parseInt(EnglishTextField2.getText());
+				Integer English21 =  Integer.parseInt(English2TextField1.getText());
+				Integer English22 =  Integer.parseInt(English2TextField2.getText());
+				Integer History =  Integer.parseInt(HistoryTextField.getText());
+				Integer Social =  Integer.parseInt(SocialTextField.getText());
+				
+				if(Chinese1 >= 60)
+					point += 2;
+				if(Chinese2 >= 60)
+					point += 2;
+				if(English1 >= 60)
+					point += 2;
+				if(English2 >= 60)
+					point += 2;
+				if(English21 >= 60)
+					point += 1;
+				if(English22 >= 60)
+					point += 1;
+				if(History >= 60)
+					point += 2;
+				if(Social >= 60)
+					point += 2;
+				
+				gradeCounter = Chinese1 + Chinese2 + English1 + English2 + English21 + English22 + History + Social;
+				System.out.print(point);
+	}
+	public static void CalculatesecondStep(String[] args) {
+		//計算區塊
+				Integer Course1 =  Integer.parseInt(GeneralCourse1.getText());
+				Integer Course2 =  Integer.parseInt(GeneralCourse2.getText());
+				Integer Course3 =  Integer.parseInt(GeneralCourse3.getText());
+				Integer Course4 =  Integer.parseInt(GeneralCourse4.getText());
+				Integer Course5 =  Integer.parseInt(GeneralCourse5.getText());
+				Integer Course6 =  Integer.parseInt(GeneralCourse6.getText());
+				Integer Course7 =  Integer.parseInt(GeneralCourse7.getText());
+				if(Course1 >= 60)
+					point += 2;
+				if(Course2 >= 60)
+					point += 2;
+				if(Course3 >= 60)
+					point += 2;
+				if(Course4 >= 60)
+					point += 2;
+				if(Course5 >= 60)
+					point += 2;
+				if(Course6 >= 60)
+					point += 2;
+				if(Course7 >= 60)
+					point += 2;
+
+				gradeCounter += Course1 + Course2 + Course3 + Course4 + Course5 + Course6 + Course7;
+				//
+	}
+	public static void CalculateSOFT(String[] args) {
+		//計算區塊1
+		Integer Calculus1 =  Integer.parseInt(CalculusTextField1.getText());
+		Integer Calculus2 =  Integer.parseInt(CalculusTextField2.getText());
+		Integer Physics =  Integer.parseInt(PhysicsTextField.getText());
+		Integer BCC =  Integer.parseInt(BCCTextField.getText());
+		Integer CProgramming =  Integer.parseInt(CProgrammingTextField.getText());
+		Integer Software =  Integer.parseInt(SoftwareTextField.getText());
+		if(Calculus1 >= 60)
+			point += 3;
+		if(Calculus2 >= 60)
+			point += 3;
+		if(Physics >= 60)
+			point += 3;
+		if(BCC >= 60)
+			point += 3;
+		if(CProgramming >= 60)
+			point += 3;
+		if(Software >= 60)
+			point += 3;
+		
+		gradeCounter += Calculus1 + Calculus2 + Physics + BCC + CProgramming + Software;
+
+		//計算區塊2
+		Integer DataStructure =  Integer.parseInt(DataStructureTextField.getText());
+		Integer Discrete =  Integer.parseInt(DiscreteTextField.getText());
+		Integer Electric =  Integer.parseInt(ElectricTextField.getText());
+		Integer Electriclab =  Integer.parseInt(ElectriclabTextField.getText());
+		Integer SystemAssembly =  Integer.parseInt(SystemAssemblyTextField.getText());
+		Integer Probability =  Integer.parseInt(ProbabilityTextField.getText());
+		Integer LinearAlgebra =  Integer.parseInt(LinearAlgebraTextField.getText());
+		Integer ProgrammingLanguage =  Integer.parseInt(ProgrammingLanguageTextField.getText());
+		if(DataStructure >= 60)
+			point += 3;
+		if(Discrete >= 60)
+			point += 3;
+		if(Electric >= 60)
+			point += 3;
+		if(Electriclab >= 60)
+			point += 1;
+		if(SystemAssembly >= 60)
+			point += 3;
+		if(Probability >= 60)
+			point += 3;
+		if(LinearAlgebra >= 60)
+			point += 3;
+		if(ProgrammingLanguage >= 60)
+			point += 3;
+					
+		gradeCounter += DataStructure + Discrete + Electric + Electriclab + SystemAssembly + Probability + LinearAlgebra + ProgrammingLanguage;
+		//計算區塊3
+		Integer ComputerOrgan =  Integer.parseInt(ComputerOrganTextField.getText());
+		Integer ComputerInternet =  Integer.parseInt(ComputerInternetTextField.getText());
+		Integer Algorithm =  Integer.parseInt(AlgorithmTextField.getText());
+		Integer OS =  Integer.parseInt(OSTextField.getText());
+		if(ComputerOrgan >= 60)
+			point += 3;
+		if(ComputerInternet >= 60)
+			point += 3;
+		if(Algorithm >= 60)
+			point += 3;
+		if(OS >= 60)
+			point += 3;
+				
+		gradeCounter += ComputerOrgan + ComputerInternet + Algorithm + OS;
+		//計算區塊4
+		Integer Java =  Integer.parseInt(JavaTextField.getText());
+		Integer TechEng =  Integer.parseInt(TechEngTextField.getText());
+		Integer OOP =  Integer.parseInt(OOPTextField.getText());
+		Integer Logic =  Integer.parseInt(LogicTextField.getText());
+		Integer Logiclab =  Integer.parseInt(LogiclabTextField.getText());
+		Integer Database =  Integer.parseInt(DatabaseTextField.getText());
+		Integer SoftTest =  Integer.parseInt(SoftTestTextField.getText());
+		Integer Compiler =  Integer.parseInt(CompilerTextField.getText());
+		Integer FinalProgram1 =  Integer.parseInt(FinalProgram1TextField.getText());
+		Integer FinalProgram =  Integer.parseInt(FinalProgramTextField.getText());
+		if(Java >= 60)
+			point += 3;
+		if(TechEng >= 60)
+			point += 2;
+		if(OOP >= 60)
+			point += 3;
+		if(Logic >= 60)
+			point += 3;
+		if(Logiclab >= 60)
+			point += 1;
+		if(Database >= 60)
+			point += 3;
+		if(SoftTest >= 60)
+			point += 3;
+		if(Compiler >= 60)
+			point += 3;
+		if(FinalProgram1 >= 60)
+			point += 2;
+		if(FinalProgram >= 60)
+			point += 2;
+	
+		gradeCounter += Java + TechEng + OOP + Logic + Logiclab + Database + SoftTest + Compiler + FinalProgram1 + FinalProgram;
+		//
+	}
+	public static void CalculateELEC(String[] args) {
+	}
+	public static void CalculateMEDI(String[] args) {
+	}
+	
+	public static void CalculatefinalStep(String[] args) {
+	}
+	
 	//計算結果
 	public static void showResult(String[] args) {
 		p6.setVisible(true);
@@ -931,6 +1046,12 @@ public class main extends JFrame implements ActionListener {
 		p6.add(avg);
 		p6.add(lab5);
 		p6.add(result);
+		
+		
+		CalculatefirstStep(null);
+		CalculatesecondStep(null);
+		CalculateSOFT(null);
+		
 		
 		//通識門檻檢查
 		Integer Box1 = selectBox1.getSelectedIndex();
