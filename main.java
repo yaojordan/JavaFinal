@@ -201,7 +201,7 @@ public class main extends JFrame implements ActionListener {
 	static Label sum = new Label();
 	static Label result = new Label();
 	
-	static int point = 0;
+	static Integer point = 0;
 	static double average = 0;
 	static int gradeCounter = 0;
 	
@@ -837,6 +837,7 @@ public class main extends JFrame implements ActionListener {
 		p5.add(SocialNetTextField);
 		p5.add(VideoLab);
 		p5.add(VideoTextField);
+
 		
 		nextBtn5.setBounds(475, 400, 80, 30);
 		p5.add(nextBtn5);
@@ -874,7 +875,6 @@ public class main extends JFrame implements ActionListener {
 					point += 2;
 				
 				gradeCounter = Chinese1 + Chinese2 + English1 + English2 + English21 + English22 + History + Social;
-				System.out.print(point);
 	}
 	public static void CalculatesecondStep(String[] args) {
 		//計算區塊
@@ -1007,8 +1007,98 @@ public class main extends JFrame implements ActionListener {
 	}
 	public static void CalculateMEDI(String[] args) {
 	}
-	
 	public static void CalculatefinalStep(String[] args) {
+		//計算區塊1
+		Integer OOPD =  Integer.parseInt(OOPDTextField.getText());
+		Integer SM =  Integer.parseInt(SMLTextField.getText());
+		Integer Web =  Integer.parseInt(WebPTextField.getText());
+		Integer UX =  Integer.parseInt(UXTextField.getText());
+		Integer ADS =  Integer.parseInt(ADSTextField.getText());
+		Integer SLC =  Integer.parseInt(SLCTextField.getText());
+		Integer UI =  Integer.parseInt(UITextField.getText());
+		Integer SS =  Integer.parseInt(SSTextField.getText());
+		Integer CC =  Integer.parseInt(CCTextField.getText());
+		Integer ALogic =  Integer.parseInt(ALogicTextField.getText());
+		Integer Wifi =  Integer.parseInt(WifiTextField.getText());
+		if(OOPD >= 60)
+			point += 3;
+		if(SM >= 60)
+			point += 3;
+		if(Web >= 60)
+			point += 3;
+		if(UX >= 60)
+			point += 3;
+		if(ADS >= 60)
+			point += 3;
+		if(SLC >= 60)
+			point += 3;
+		if(UI >= 60)
+			point += 3;
+		if(SS >= 60)
+			point += 3;
+		if(CC >= 60)
+			point += 3;
+		if(ALogic >= 60)
+			point += 3;
+		if(Wifi >= 60)
+			point += 3;
+		
+		//有分數的才算進成績
+		if(OOPD != 0)
+			gradeCounter += OOPD;
+		if(SM != 0)
+			gradeCounter += SM;
+		if(Web != 0)
+			gradeCounter += Web;
+		if(ADS != 0)
+			gradeCounter += ADS;
+		if(SLC != 0)
+			gradeCounter += SLC;
+		if(UI != 0)
+			gradeCounter += UI;
+		if(SS != 0)
+			gradeCounter += SS;
+		if(CC != 0)
+			gradeCounter += CC;
+		if(ALogic != 0)
+			gradeCounter += ALogic;
+		if(Wifi != 0)
+			gradeCounter += Wifi;
+		
+		//計算區塊2
+		Integer VLSI =  Integer.parseInt(VLSITextField.getText());
+		Integer Emb =  Integer.parseInt(EmbTextField.getText());
+		Integer Signal =  Integer.parseInt(SignalTextField.getText());
+		Integer Creative =  Integer.parseInt(CreativeTextField.getText());
+		Integer Social =  Integer.parseInt(SocialNetTextField.getText());
+		Integer Video =  Integer.parseInt(VideoTextField.getText());
+		if(VLSI >= 60)
+			point += 3;
+		if(Emb >= 60)
+			point += 3;
+		if(Signal >= 60)
+			point += 3;
+		if(Creative >= 60)
+			point += 3;
+		if(Social >= 60)
+			point += 3;
+		if(Video >= 60)
+			point += 3;
+		//有分數的才算進成績
+		if(VLSI != 0)
+			gradeCounter += VLSI;
+		if(Emb != 0)
+			gradeCounter += Emb;
+		if(Signal != 0)
+			gradeCounter += Signal;
+		if(Creative != 0)
+			gradeCounter += Creative;
+		if(Social != 0)
+			gradeCounter += Social;
+		if(Video != 0)
+			gradeCounter += Video;
+		
+			
 	}
 	
 	//計算結果
@@ -1031,7 +1121,7 @@ public class main extends JFrame implements ActionListener {
 		lab4.setBounds(200, 170, 60, 20);
 		avg.setBounds(280, 170, 70, 20);
 		lab5.setBounds(200, 200, 60, 20);
-		result.setBounds(280, 200, 70, 20);
+		result.setBounds(280, 200, 120, 20);
 		
 		name.setText(nameTextField.getText());
 		num.setText(numberTextField.getText());
@@ -1047,10 +1137,23 @@ public class main extends JFrame implements ActionListener {
 		p6.add(lab5);
 		p6.add(result);
 		
-		
+		//計算
 		CalculatefirstStep(null);
 		CalculatesecondStep(null);
-		CalculateSOFT(null);
+		
+		if(ckbSOFT.getState() == true)
+			CalculateSOFT(null);
+		else if(ckbELEC.getState() == true)
+			CalculateELEC(null);
+		else if(ckbMEDI.getState() == true)
+			CalculateMEDI(null);
+		
+		CalculatefinalStep(null);
+		
+		//總學分
+		String pointS = point.toString();
+		sum.setText(pointS);
+		
 		
 		
 		//通識門檻檢查
@@ -1078,6 +1181,15 @@ public class main extends JFrame implements ActionListener {
 		else if(Box5!=Box6 && Box6!=Box7)
 			GeneralFinish = true;
 		//
+		
+		if(point > 128 && GeneralFinish == true)
+		{
+			result.setText("通過系畢業門檻");
+		}
+		else
+		{
+			result.setText("尚未通過系畢業門檻");
+		}
 		
 		frame_page1.add(p6);
 		frame_page1.setVisible(true);
