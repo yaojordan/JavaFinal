@@ -66,6 +66,7 @@ public class main extends JFrame implements ActionListener {
 	static TextField GeneralCourse5 = new TextField("60");
 	static TextField GeneralCourse6 = new TextField("60");
 	static TextField GeneralCourse7 = new TextField("60");
+	static boolean GeneralFinish = false;//判斷是否橫跨三領域
 	
 	//必修必選
 	static Label CalculusLab1 = new Label("微積分(上)");
@@ -194,6 +195,16 @@ public class main extends JFrame implements ActionListener {
 	static Label MicroProcessorlabLab = new Label("微算機系統實驗");
 	static TextField MicroProcessorlabTextField = new TextField("60");
 	
+	static Label name = new Label();
+	static Label num = new Label();
+	static Label avg = new Label();
+	static Label sum = new Label();
+	static Label result = new Label();
+	
+	static int point = 0;
+	static double average = 0;
+	static int gradeCounter = 0;
+	
 	//第一步驟頁面
 	public static void main(String args[])
 	{
@@ -282,8 +293,39 @@ public class main extends JFrame implements ActionListener {
 		p2.add(HistoryTextField);
 		p2.add(SocialLab);
 		p2.add(SocialTextField);
-		
 		p2.add(nextBtn2);
+		
+		//計算區塊
+		Integer Chinese1 =  Integer.parseInt(ChineseTextField1.getText());
+		Integer Chinese2 =  Integer.parseInt(ChineseTextField2.getText());
+		Integer English1 =  Integer.parseInt(EnglishTextField1.getText());
+		Integer English2 =  Integer.parseInt(EnglishTextField2.getText());
+		Integer English21 =  Integer.parseInt(English2TextField1.getText());
+		Integer English22 =  Integer.parseInt(English2TextField2.getText());
+		Integer History =  Integer.parseInt(HistoryTextField.getText());
+		Integer Social =  Integer.parseInt(SocialTextField.getText());
+		
+		if(Chinese1 >= 60)
+			point += 2;
+		if(Chinese2 >= 60)
+			point += 2;
+		if(English1 >= 60)
+			point += 2;
+		if(English2 >= 60)
+			point += 2;
+		if(English21 >= 60)
+			point += 1;
+		if(English22 >= 60)
+			point += 1;
+		if(History >= 60)
+			point += 2;
+		if(Social >= 60)
+			point += 2;
+		
+		gradeCounter = Chinese1 + Chinese2 + English1 + English2 + English21 + English22 + History + Social;
+		//System.out.print(point);
+		//
+		
 		nextBtn2.addActionListener(frame_page1);
 		frame_page1.add(p2);
 		frame_page1.setVisible(true);
@@ -339,6 +381,32 @@ public class main extends JFrame implements ActionListener {
 		p3.add(selectBox7);
 		p3.add(GeneralCourse7);
 		p3.add(nextBtn3);
+		
+		//計算區塊
+		Integer Course1 =  Integer.parseInt(GeneralCourse1.getText());
+		Integer Course2 =  Integer.parseInt(GeneralCourse2.getText());
+		Integer Course3 =  Integer.parseInt(GeneralCourse3.getText());
+		Integer Course4 =  Integer.parseInt(GeneralCourse4.getText());
+		Integer Course5 =  Integer.parseInt(GeneralCourse5.getText());
+		Integer Course6 =  Integer.parseInt(GeneralCourse6.getText());
+		Integer Course7 =  Integer.parseInt(GeneralCourse7.getText());
+		if(Course1 >= 60)
+			point += 2;
+		if(Course2 >= 60)
+			point += 2;
+		if(Course3 >= 60)
+			point += 2;
+		if(Course4 >= 60)
+			point += 2;
+		if(Course5 >= 60)
+			point += 1;
+		if(Course6 >= 60)
+			point += 1;
+		if(Course7 >= 60)
+			point += 2;
+
+		gradeCounter += Course1 + Course2 + Course3 + Course4 + Course5 + Course6 + Course7;
+		//
 		
 		nextBtn3.addActionListener(frame_page1);
 		frame_page1.add(p3);
@@ -830,11 +898,66 @@ public class main extends JFrame implements ActionListener {
 	
 	//計算結果
 	public static void showResult(String[] args) {
-		
 		p6.setVisible(true);
 		p5.setVisible(false);
+		Label lab1 = new Label("姓名：");
+		Label lab2 = new Label("學號：");
+		Label lab3 = new Label("學分數：");
+		Label lab4 = new Label("畢業成績：");
+		Label lab5 = new Label("結果：");
+		p6.setLayout(null);
 		
-	
+		lab1.setBounds(200, 80, 60, 20);
+		name.setBounds(280, 80, 70, 20);
+		lab2.setBounds(200, 110, 60, 20);
+		num.setBounds(280, 110, 70, 20);
+		lab3.setBounds(200, 140, 60, 20);
+		sum.setBounds(280, 140, 70, 20);
+		lab4.setBounds(200, 170, 60, 20);
+		avg.setBounds(280, 170, 70, 20);
+		lab5.setBounds(200, 200, 60, 20);
+		result.setBounds(280, 200, 70, 20);
+		
+		name.setText(nameTextField.getText());
+		num.setText(numberTextField.getText());
+		
+		p6.add(lab1);
+		p6.add(name);
+		p6.add(lab2);
+		p6.add(num);
+		p6.add(lab3);
+		p6.add(sum);
+		p6.add(lab4);
+		p6.add(avg);
+		p6.add(lab5);
+		p6.add(result);
+		
+		//通識門檻檢查
+		Integer Box1 = selectBox1.getSelectedIndex();
+		Integer Box2 = selectBox2.getSelectedIndex();
+		Integer Box3 = selectBox3.getSelectedIndex();
+		Integer Box4 = selectBox4.getSelectedIndex();
+		Integer Box5 = selectBox5.getSelectedIndex();
+		Integer Box6 = selectBox6.getSelectedIndex();
+		Integer Box7 = selectBox7.getSelectedIndex();
+		if(Box1!=Box2 && Box2!=Box3 || Box1!=Box2 && Box2!=Box4 || Box1!=Box2 && Box2!=Box5 || Box1!=Box2 && Box2!=Box6 || Box1!=Box2 && Box2!=Box7 ||
+		   Box1!=Box3 && Box3!=Box4 || Box1!=Box3 && Box3!=Box5 || Box1!=Box3 && Box3!=Box6 || Box1!=Box3 && Box3!=Box7 ||
+		   Box1!=Box4 && Box4!=Box5 || Box1!=Box4 && Box4!=Box6 || Box1!=Box4 && Box4!=Box7 ||
+		   Box1!=Box5 && Box5!=Box6 || Box1!=Box5 && Box5!=Box7 || Box1!=Box6 && Box6!=Box7 )
+			GeneralFinish = true;
+		else if(Box2!=Box3 && Box3!=Box4 || Box2!=Box3 && Box3!=Box5 || Box2!=Box3 && Box3!=Box6 || Box2!=Box3 && Box3!=Box7 || Box2!=Box4 && Box4!=Box5 ||
+				Box2!=Box4 && Box4!=Box6 || Box2!=Box4 && Box4!=Box7 || Box2!=Box5 && Box5!=Box6 || Box2!=Box5 && Box5!=Box7 ||
+				Box2!=Box6 && Box6!=Box7 )
+			GeneralFinish = true;
+		else if(Box3!=Box4 && Box4!=Box5 || Box3!=Box4 && Box4!=Box6 || Box3!=Box4 && Box4!=Box7 || Box3!=Box5 && Box5!=Box6 || Box3!=Box5 && Box5!=Box7 ||
+				Box3!=Box6 && Box6!=Box7 )
+			GeneralFinish = true;
+		else if(Box4!=Box5 && Box5!=Box6 || Box4!=Box5 && Box5!=Box7)
+			GeneralFinish = true;
+		else if(Box5!=Box6 && Box6!=Box7)
+			GeneralFinish = true;
+		//
+		
 		frame_page1.add(p6);
 		frame_page1.setVisible(true);
 	}
