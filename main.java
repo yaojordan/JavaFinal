@@ -559,6 +559,27 @@ public class main extends JFrame implements ActionListener {
 		p4.add(LinearAlgebraTextField);
 		p4.add(HardwareLab);
 		p4.add(HardwareTextField);
+		
+		ComputerOrganLab.setBounds(380, 80, 100, 20);
+		ComputerOrganTextField.setBounds(480, 80, 30, 20);
+		ComputerInternetLab.setBounds(380, 110, 100, 20);
+		ComputerInternetTextField.setBounds(480, 110, 30, 20);
+		AlgorithmLab.setBounds(380, 140, 100, 20);
+		AlgorithmTextField.setBounds(480, 140, 30, 20);
+		OSLab.setBounds(380, 170, 100, 20);
+		OSTextField.setBounds(480, 170, 30, 20);
+		DatabaseLab.setBounds(380, 200, 100, 20);
+		DatabaseTextField.setBounds(480, 200, 30, 20);
+		MicroProcessorLab.setBounds(380, 230, 100, 20);
+		MicroProcessorTextField.setBounds(480, 230, 30, 20);
+		MicroProcessorlabLab.setBounds(380, 260, 100, 20);
+		MicroProcessorlabTextField.setBounds(480, 260, 30, 20);
+		CompilerLab.setBounds(380, 290, 100, 20);
+		CompilerTextField.setBounds(480, 290, 30, 20);
+		FinalProgram1Lab.setBounds(380, 320, 100, 20);
+		FinalProgram1TextField.setBounds(480, 320, 30, 20);
+		FinalProgramLab.setBounds(380, 350, 100, 20);
+		FinalProgramTextField.setBounds(480, 350, 30, 20);
 		p4.add(ComputerOrganLab);
 		p4.add(ComputerOrganTextField);
 		p4.add(ComputerInternetLab);
@@ -587,7 +608,7 @@ public class main extends JFrame implements ActionListener {
 		p4.add(FinalProgramLab);
 		p4.add(FinalProgramTextField);
 		
-		
+		nextBtn4.setBounds(475, 400, 80, 30);
 		p4.add(nextBtn4);
 		nextBtn4.addActionListener(frame_page1);
 		frame_page1.add(p4);
@@ -603,6 +624,21 @@ public class main extends JFrame implements ActionListener {
 		title.setBounds(260, 30, 50, 20);
 		p4.add(title);
 		
+		
+		CalculusLab1.setBounds(20, 80, 100, 20);
+		CalculusTextField1.setBounds(120, 80, 30, 20);
+		CalculusLab2.setBounds(20, 110, 100, 20);
+		CalculusTextField2.setBounds(120, 110, 30, 20);
+		PhysicsLab.setBounds(20, 140, 100, 20);
+		PhysicsTextField.setBounds(120, 140, 30, 20);
+		BCCLab.setBounds(20, 170, 100, 20);
+		BCCTextField.setBounds(120, 170, 30, 20);
+		CProgrammingLab.setBounds(20, 200, 100, 20);
+		CProgrammingTextField.setBounds(120, 200, 30, 20);
+		DigitalCreativeLab.setBounds(20, 230, 100, 20);
+		DigitalCreativeTextField.setBounds(120, 230, 30, 20);
+		JavaLab.setBounds(20, 260, 100, 20);
+		JavaTextField.setBounds(120, 260, 30, 20);
 		p4.add(CalculusLab1);
 		p4.add(CalculusTextField1);
 		p4.add(CalculusLab2);
@@ -617,6 +653,29 @@ public class main extends JFrame implements ActionListener {
 		p4.add(DigitalCreativeTextField);
 		p4.add(JavaLab);
 		p4.add(JavaTextField);
+		
+		DataStructureLab.setBounds(200, 80, 100, 20);
+		DataStructureTextField.setBounds(300, 80, 30, 20);
+		CreativeTendLab.setBounds(200, 110, 100, 20);
+		CreativeTendTextField.setBounds(300, 110, 30, 20);
+		InternetCreativeLab.setBounds(200, 140, 100, 20);
+		InternetCreativeTextField.setBounds(300, 140, 30, 20);
+		CreativeMathLab.setBounds(200, 170, 100, 20);
+		CreativeMathTextField.setBounds(300, 170, 30, 20);
+		InteractionDesignLab.setBounds(200, 200, 100, 20);
+		InteractionDesignTextField.setBounds(300, 200, 30, 20);
+		DigitalMaterialLab.setBounds(200, 230, 100, 20);
+		DigitalMaterialTextField.setBounds(300, 230, 30, 20);
+		DigitalMediLab.setBounds(200, 260, 100, 20);
+		DigitalMediTextField.setBounds(300, 260, 30, 20);
+		LogicLab.setBounds(200, 290, 100, 20);
+		LogicTextField.setBounds(300, 290, 30, 20);
+		LogiclabLab.setBounds(200, 320, 100, 20);
+		LogiclabTextField.setBounds(300, 320, 30, 20);
+		EmbeddedSystemLab.setBounds(200, 350, 100, 20);
+		EmbeddedSystemTextField.setBounds(300, 350, 30, 20);
+		TechEngLab.setBounds(200, 380, 100, 20);
+		TechEngTextField.setBounds(300, 380, 30, 20);
 		p4.add(DataStructureLab);
 		p4.add(DataStructureTextField);
 		p4.add(CreativeTendLab);
@@ -631,6 +690,21 @@ public class main extends JFrame implements ActionListener {
 		p4.add(DigitalMaterialTextField);
 		p4.add(DigitalMediLab);
 		p4.add(DigitalMediTextField);
+		
+		ComputerInternetLab.setBounds(380, 80, 100, 20);
+		ComputerInternetTextField.setBounds(480, 80, 30, 20);
+		AlgorithmLab.setBounds(380, 110, 100, 20);
+		AlgorithmTextField.setBounds(480, 110, 30, 20);
+		OSLab.setBounds(380, 140, 100, 20);
+		OSTextField.setBounds(480, 140, 30, 20);
+		ProtableDeviceLab.setBounds(380, 170, 100, 20);
+		ProtableDeviceTextField.setBounds(480, 170, 30, 20);
+		DatabaseLab.setBounds(380, 200, 100, 20);
+		DatabaseTextField.setBounds(480, 200, 30, 20);
+		FinalProgram1Lab.setBounds(380, 230, 100, 20);
+		FinalProgram1TextField.setBounds(480, 230, 30, 20);
+		FinalProgramLab.setBounds(380, 260, 100, 20);
+		FinalProgramTextField.setBounds(480, 260, 30, 20);
 		p4.add(ComputerInternetLab);
 		p4.add(ComputerInternetTextField);
 		p4.add(AlgorithmLab);
@@ -646,15 +720,16 @@ public class main extends JFrame implements ActionListener {
 		p4.add(ProtableDeviceTextField);
 		p4.add(DatabaseLab);
 		p4.add(DatabaseTextField);
-		p4.add(MicroProcessorLab);
-		p4.add(MicroProcessorTextField);
-		p4.add(MicroProcessorlabLab);
-		p4.add(MicroProcessorlabTextField);
+		p4.add(LogicLab);
+		p4.add(LogicTextField);
+		p4.add(LogiclabLab);
+		p4.add(LogiclabTextField);
 		p4.add(FinalProgram1Lab);
 		p4.add(FinalProgram1TextField);
 		p4.add(FinalProgramLab);
 		p4.add(FinalProgramTextField);
 		
+		nextBtn4.setBounds(475, 400, 80, 30);
 		p4.add(nextBtn4);
 		nextBtn4.addActionListener(frame_page1);
 		frame_page1.add(p4);
