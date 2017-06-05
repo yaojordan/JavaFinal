@@ -576,6 +576,7 @@ public class main extends JFrame implements ActionListener {
 		p4.add(LinearAlgebraTextField);
 		p4.add(HardwareLab);
 		p4.add(HardwareTextField);
+
 		
 		ComputerOrganLab.setBounds(380, 80, 100, 20);
 		ComputerOrganTextField.setBounds(480, 80, 30, 20);
@@ -605,7 +606,7 @@ public class main extends JFrame implements ActionListener {
 		p4.add(AlgorithmTextField);
 		p4.add(OSLab);
 		p4.add(OSTextField);
-		
+
 		p4.add(JavaLab);
 		p4.add(JavaTextField);
 		p4.add(TechEngLab);
@@ -670,6 +671,7 @@ public class main extends JFrame implements ActionListener {
 		p4.add(DigitalCreativeTextField);
 		p4.add(JavaLab);
 		p4.add(JavaTextField);
+
 		
 		DataStructureLab.setBounds(200, 80, 100, 20);
 		DataStructureTextField.setBounds(300, 80, 30, 20);
@@ -707,6 +709,7 @@ public class main extends JFrame implements ActionListener {
 		p4.add(DigitalMaterialTextField);
 		p4.add(DigitalMediLab);
 		p4.add(DigitalMediTextField);
+
 		
 		ComputerInternetLab.setBounds(380, 80, 100, 20);
 		ComputerInternetTextField.setBounds(480, 80, 30, 20);
@@ -728,7 +731,7 @@ public class main extends JFrame implements ActionListener {
 		p4.add(AlgorithmTextField);
 		p4.add(OSLab);
 		p4.add(OSTextField);
-		
+
 		p4.add(TechEngLab);
 		p4.add(TechEngTextField);
 		p4.add(EmbeddedSystemLab);
@@ -745,7 +748,7 @@ public class main extends JFrame implements ActionListener {
 		p4.add(FinalProgram1TextField);
 		p4.add(FinalProgramLab);
 		p4.add(FinalProgramTextField);
-		
+
 		nextBtn4.setBounds(475, 400, 80, 30);
 		p4.add(nextBtn4);
 		nextBtn4.addActionListener(frame_page1);
@@ -1004,8 +1007,199 @@ public class main extends JFrame implements ActionListener {
 		//
 	}
 	public static void CalculateELEC(String[] args) {
+		//計算區塊1
+		Integer Calculus1 =  Integer.parseInt(CalculusTextField1.getText());
+		Integer Calculus2 =  Integer.parseInt(CalculusTextField2.getText());
+		Integer Physics =  Integer.parseInt(PhysicsTextField.getText());
+		Integer BCC =  Integer.parseInt(BCCTextField.getText());
+		Integer CProgramming =  Integer.parseInt(CProgrammingTextField.getText());
+		Integer Electric =  Integer.parseInt(ElectricTextField.getText());
+		Integer Electriclab =  Integer.parseInt(ElectriclabTextField.getText());
+		if(Calculus1 >= 60)
+			point += 3;
+		if(Calculus2 >= 60)
+			point += 3;
+		if(Physics >= 60)
+			point += 3;
+		if(BCC >= 60)
+			point += 3;
+		if(CProgramming >= 60)
+			point += 3;
+		if(Electric >= 60)
+			point += 3;
+		if(Electriclab >= 60)
+			point += 1;
+				
+		gradeCounter += Calculus1 + Calculus2 + Physics + BCC + CProgramming + Electric + Electriclab;
+		//計算區塊2
+		Integer DataStructure =  Integer.parseInt(DataStructureTextField.getText());
+		Integer Discrete =  Integer.parseInt(DiscreteTextField.getText());
+		Integer Logic =  Integer.parseInt(LogicTextField.getText());
+		Integer Logiclab =  Integer.parseInt(LogiclabTextField.getText());
+		Integer EmbeddedSystem =  Integer.parseInt(EmbeddedSystemTextField.getText());
+		Integer SystemAssembly =  Integer.parseInt(SystemAssemblyTextField.getText());
+		Integer Probability =  Integer.parseInt(ProbabilityTextField.getText());
+		Integer LinearAlgebra =  Integer.parseInt(LinearAlgebraTextField.getText());
+		Integer Hardware =  Integer.parseInt(HardwareTextField.getText());
+		if(DataStructure >= 60)
+			point += 3;
+		if(Discrete >= 60)
+			point += 3;
+		if(Logic >= 60)
+			point += 3;
+		if(Logiclab >= 60)
+			point += 1;
+		if(EmbeddedSystem >= 60)
+			point += 3;
+		if(SystemAssembly >= 60)
+			point += 3;
+		if(Probability >= 60)
+			point += 3;
+		if(LinearAlgebra >= 60)
+			point += 3;
+		if(Hardware >= 60)
+			point += 3;
+					
+		gradeCounter += DataStructure + Discrete + Logic + Logiclab + EmbeddedSystem + SystemAssembly + Probability + LinearAlgebra + Hardware;
+		//計算區塊3
+		Integer ComputerOrgan =  Integer.parseInt(ComputerOrganTextField.getText());
+		Integer ComputerInternet =  Integer.parseInt(ComputerInternetTextField.getText());
+		Integer Algorithm =  Integer.parseInt(AlgorithmTextField.getText());
+		Integer OS =  Integer.parseInt(OSTextField.getText());
+		if(ComputerOrgan >= 60)
+			point += 3;
+		if(ComputerInternet >= 60)
+			point += 3;
+		if(Algorithm >= 60)
+			point += 3;
+		if(OS >= 60)
+			point += 3;
+				
+		gradeCounter += ComputerOrgan + ComputerInternet + Algorithm + OS;
+		
+		//計算區塊4
+		Integer Java =  Integer.parseInt(JavaTextField.getText());
+		Integer TechEng =  Integer.parseInt(TechEngTextField.getText());
+		Integer ProgrammingLanguage =  Integer.parseInt(ProgrammingLanguageTextField.getText());
+		Integer Database =  Integer.parseInt(DatabaseTextField.getText());
+		Integer MicroProcessor =  Integer.parseInt(MicroProcessorTextField.getText());
+		Integer MicroProcessorlab =  Integer.parseInt(MicroProcessorlabTextField.getText());
+		Integer Compiler =  Integer.parseInt(CompilerTextField.getText());
+		Integer FinalProgram1 =  Integer.parseInt(FinalProgram1TextField.getText());
+		Integer FinalProgram =  Integer.parseInt(FinalProgramTextField.getText());
+		if(Java >= 60)
+			point += 3;
+		if(TechEng >= 60)
+			point += 2;
+		if(ProgrammingLanguage >= 60)
+			point += 3;
+		if(MicroProcessor >= 60)
+			point += 3;
+		if(MicroProcessorlab >= 60)
+			point += 1;
+		if(Database >= 60)
+			point += 3;
+		if(Compiler >= 60)
+			point += 3;
+		if(FinalProgram1 >= 60)
+			point += 2;
+		if(FinalProgram >= 60)
+			point += 2;
+		
+		gradeCounter += Java + TechEng + ProgrammingLanguage + MicroProcessor + MicroProcessorlab + Database + Compiler + FinalProgram1 + FinalProgram;
+		//
 	}
 	public static void CalculateMEDI(String[] args) {
+		//計算區塊1
+		Integer Calculus1 =  Integer.parseInt(CalculusTextField1.getText());
+		Integer Calculus2 =  Integer.parseInt(CalculusTextField2.getText());
+		Integer Physics =  Integer.parseInt(PhysicsTextField.getText());
+		Integer BCC =  Integer.parseInt(BCCTextField.getText());
+		Integer CProgramming =  Integer.parseInt(CProgrammingTextField.getText());
+		Integer DigitalCreative =  Integer.parseInt(DigitalCreativeTextField.getText());
+		Integer Java =  Integer.parseInt(JavaTextField.getText());
+		if(Calculus1 >= 60)
+			point += 3;
+		if(Calculus2 >= 60)
+			point += 3;
+		if(Physics >= 60)
+			point += 3;
+		if(BCC >= 60)
+			point += 3;
+		if(CProgramming >= 60)
+			point += 3;
+		if(DigitalCreative >= 60)
+			point += 3;
+		if(Java >= 60)
+			point += 3;
+				
+		gradeCounter += Calculus1 + Calculus2 + Physics + BCC + CProgramming + DigitalCreative + Java;
+		//計算區塊2
+		Integer DataStructure =  Integer.parseInt(DataStructureTextField.getText());
+		Integer CreativeTend =  Integer.parseInt(CreativeTendTextField.getText());
+		Integer InternetCreative =  Integer.parseInt(InternetCreativeTextField.getText());
+		Integer CreativeMath =  Integer.parseInt(CreativeMathTextField.getText());
+		Integer InteractionDesign =  Integer.parseInt(InteractionDesignTextField.getText());
+		Integer DigitalMaterial =  Integer.parseInt(DigitalMaterialTextField.getText());
+		Integer DigitalMedi =  Integer.parseInt(DigitalMediTextField.getText());
+		if(DataStructure >= 60)
+			point += 3;
+		if(CreativeTend >= 60)
+			point += 3;
+		if(InternetCreative >= 60)
+			point += 3;
+		if(CreativeMath >= 60)
+			point += 3;
+		if(InteractionDesign >= 60)
+			point += 3;
+		if(DigitalMaterial >= 60)
+			point += 3;
+		if(DigitalMedi >= 60)
+			point += 3;
+
+					
+		gradeCounter += DataStructure + CreativeTend + InternetCreative + CreativeMath + InteractionDesign + DigitalMaterial + DigitalMedi;
+		//計算區塊3
+		Integer ComputerInternet =  Integer.parseInt(ComputerInternetTextField.getText());
+		Integer Algorithm =  Integer.parseInt(AlgorithmTextField.getText());
+		Integer OS =  Integer.parseInt(OSTextField.getText());
+		if(ComputerInternet >= 60)
+			point += 3;
+		if(Algorithm >= 60)
+			point += 3;
+		if(OS >= 60)
+			point += 3;
+						
+		gradeCounter += ComputerInternet + Algorithm + OS;
+		
+		//計算區塊4
+		Integer TechEng =  Integer.parseInt(TechEngTextField.getText());
+		Integer EmbeddedSystem =  Integer.parseInt(EmbeddedSystemTextField.getText());
+		Integer ProtableDevice =  Integer.parseInt(ProtableDeviceTextField.getText());
+		Integer Database =  Integer.parseInt(DatabaseTextField.getText());
+		Integer Logic =  Integer.parseInt(LogicTextField.getText());
+		Integer Logiclab =  Integer.parseInt(LogiclabTextField.getText());
+		Integer FinalProgram1 =  Integer.parseInt(FinalProgram1TextField.getText());
+		Integer FinalProgram =  Integer.parseInt(FinalProgramTextField.getText());
+		if(TechEng >= 60)
+			point += 2;
+		if(EmbeddedSystem >= 60)
+			point += 3;
+		if(ProtableDevice >= 60)
+			point += 3;
+		if(Database >= 60)
+			point += 3;
+		if(Logic >= 60)
+			point += 3;
+		if(Logiclab >= 60)
+			point += 1;
+		if(FinalProgram1 >= 60)
+			point += 2;
+		if(FinalProgram >= 60)
+			point += 2;
+		
+		gradeCounter += TechEng + EmbeddedSystem + ProtableDevice + Database + Logic + Logiclab + FinalProgram1 + FinalProgram;
+		//
 	}
 	public static void CalculatefinalStep(String[] args) {
 		//計算區塊1
