@@ -203,6 +203,7 @@ public class main extends JFrame implements ActionListener {
 	
 	static Integer point = 0;
 	static double average = 0;
+	static Integer averageCount = 0;//平均要除的個數
 	static int gradeCounter = 0;
 	
 	//第一步驟頁面
@@ -877,6 +878,23 @@ public class main extends JFrame implements ActionListener {
 				if(Social >= 60)
 					point += 2;
 				
+				if(Chinese1 != 0)
+					averageCount += 1;
+				if(Chinese2 != 0)
+					averageCount += 1;
+				if(English1 != 0)
+					averageCount += 1;
+				if(English2 != 0)
+					averageCount += 1;
+				if(English21 != 0)
+					averageCount += 1;
+				if(English22 != 0)
+					averageCount += 1;
+				if(History != 0)
+					averageCount += 1;
+				if(Social != 0)
+					averageCount += 1;
+				
 				gradeCounter = Chinese1 + Chinese2 + English1 + English2 + English21 + English22 + History + Social;
 	}
 	public static void CalculatesecondStep(String[] args) {
@@ -903,6 +921,22 @@ public class main extends JFrame implements ActionListener {
 				if(Course7 >= 60)
 					point += 2;
 
+				
+				if(Course1 != 0)
+					averageCount += 1;
+				if(Course2 != 0)
+					averageCount += 1;
+				if(Course3 != 0)
+					averageCount += 1;
+				if(Course4 != 0)
+					averageCount += 1;
+				if(Course5 != 0)
+					averageCount += 1;
+				if(Course6 != 0)
+					averageCount += 1;
+				if(Course7 != 0)
+					averageCount += 1;
+
 				gradeCounter += Course1 + Course2 + Course3 + Course4 + Course5 + Course6 + Course7;
 				//
 	}
@@ -926,6 +960,20 @@ public class main extends JFrame implements ActionListener {
 			point += 3;
 		if(Software >= 60)
 			point += 3;
+		
+
+		if(Calculus1 != 0)
+			averageCount += 1;
+		if(Calculus2 != 0)
+			averageCount += 1;
+		if(Physics != 0)
+			averageCount += 1;
+		if(BCC != 0)
+			averageCount += 1;
+		if(CProgramming != 0)
+			averageCount += 1;
+		if(Software != 0)
+			averageCount += 1;
 		
 		gradeCounter += Calculus1 + Calculus2 + Physics + BCC + CProgramming + Software;
 
@@ -954,6 +1002,24 @@ public class main extends JFrame implements ActionListener {
 			point += 3;
 		if(ProgrammingLanguage >= 60)
 			point += 3;
+		
+		
+		if(DataStructure != 0)
+			averageCount += 1;
+		if(Discrete != 0)
+			averageCount += 1;
+		if(Electric != 0)
+			averageCount += 1;
+		if(Electriclab != 0)
+			averageCount += 1;
+		if(SystemAssembly != 0)
+			averageCount += 1;
+		if(Probability != 0)
+			averageCount += 1;
+		if(LinearAlgebra != 0)
+			averageCount += 1;
+		if(ProgrammingLanguage != 0)
+			averageCount += 1;
 					
 		gradeCounter += DataStructure + Discrete + Electric + Electriclab + SystemAssembly + Probability + LinearAlgebra + ProgrammingLanguage;
 		//計算區塊3
@@ -969,6 +1035,17 @@ public class main extends JFrame implements ActionListener {
 			point += 3;
 		if(OS >= 60)
 			point += 3;
+		
+		
+		if(ComputerOrgan != 0)
+			averageCount += 1;
+		if(ComputerInternet != 0)
+			averageCount += 1;
+		if(Algorithm != 0)
+			averageCount += 1;
+		if(OS != 0)
+			averageCount += 1;
+
 				
 		gradeCounter += ComputerOrgan + ComputerInternet + Algorithm + OS;
 		//計算區塊4
@@ -1002,6 +1079,27 @@ public class main extends JFrame implements ActionListener {
 			point += 2;
 		if(FinalProgram >= 60)
 			point += 2;
+		
+		if(Java != 0)
+			averageCount += 1;
+		if(TechEng != 0)
+			averageCount += 1;
+		if(OOP != 0)
+			averageCount += 1;
+		if(Logic != 0)
+			averageCount += 1;
+		if(Logiclab != 0)
+			averageCount += 1;
+		if(Database != 0)
+			averageCount += 1;
+		if(SoftTest != 0)
+			averageCount += 1;
+		if(Compiler != 0)
+			averageCount += 1;
+		if(FinalProgram1 != 0)
+			averageCount += 1;
+		if(FinalProgram != 0)
+			averageCount += 1;
 	
 		gradeCounter += Java + TechEng + OOP + Logic + Logiclab + Database + SoftTest + Compiler + FinalProgram1 + FinalProgram;
 		//
@@ -1029,6 +1127,21 @@ public class main extends JFrame implements ActionListener {
 			point += 3;
 		if(Electriclab >= 60)
 			point += 1;
+		
+		if(Calculus1 != 0)
+			averageCount += 1;
+		if(Calculus2 != 0)
+			averageCount += 1;
+		if(Physics != 0)
+			averageCount += 1;
+		if(BCC != 0)
+			averageCount += 1;
+		if(CProgramming != 0)
+			averageCount += 1;
+		if(Electric != 0)
+			averageCount += 1;
+		if(Electriclab != 0)
+			averageCount += 1;
 				
 		gradeCounter += Calculus1 + Calculus2 + Physics + BCC + CProgramming + Electric + Electriclab;
 		//計算區塊2
@@ -1060,6 +1173,26 @@ public class main extends JFrame implements ActionListener {
 		if(Hardware >= 60)
 			point += 3;
 					
+		if(DataStructure != 0)
+			averageCount += 1;
+		if(Discrete != 0)
+			averageCount += 1;
+		if(Logic != 0)
+			averageCount += 1;
+		if(Logiclab != 0)
+			averageCount += 1;
+		if(EmbeddedSystem != 0)
+			averageCount += 1;
+		if(SystemAssembly != 0)
+			averageCount += 1;
+		if(Probability != 0)
+			averageCount += 1;
+		if(LinearAlgebra != 0)
+			averageCount += 1;
+		if(Hardware != 0)
+			averageCount += 1;
+
+		
 		gradeCounter += DataStructure + Discrete + Logic + Logiclab + EmbeddedSystem + SystemAssembly + Probability + LinearAlgebra + Hardware;
 		//計算區塊3
 		Integer ComputerOrgan =  Integer.parseInt(ComputerOrganTextField.getText());
@@ -1074,6 +1207,16 @@ public class main extends JFrame implements ActionListener {
 			point += 3;
 		if(OS >= 60)
 			point += 3;
+		
+		if(ComputerOrgan != 0)
+			averageCount += 1;
+		if(ComputerInternet != 0)
+			averageCount += 1;
+		if(Algorithm != 0)
+			averageCount += 1;
+		if(OS != 0)
+			averageCount += 1;
+		
 				
 		gradeCounter += ComputerOrgan + ComputerInternet + Algorithm + OS;
 		
@@ -1106,6 +1249,26 @@ public class main extends JFrame implements ActionListener {
 		if(FinalProgram >= 60)
 			point += 2;
 		
+		if(Java != 0)
+			averageCount += 1;
+		if(TechEng != 0)
+			averageCount += 1;
+		if(ProgrammingLanguage != 0)
+			averageCount += 1;
+		if(MicroProcessor != 0)
+			averageCount += 1;
+		if(MicroProcessorlab != 0)
+			averageCount += 1;
+		if(Database != 0)
+			averageCount += 1;
+		if(Compiler != 0)
+			averageCount += 1;
+		if(FinalProgram1 != 0)
+			averageCount += 1;
+		if(FinalProgram != 0)
+			averageCount += 1;
+
+		
 		gradeCounter += Java + TechEng + ProgrammingLanguage + MicroProcessor + MicroProcessorlab + Database + Compiler + FinalProgram1 + FinalProgram;
 		//
 	}
@@ -1132,6 +1295,21 @@ public class main extends JFrame implements ActionListener {
 			point += 3;
 		if(Java >= 60)
 			point += 3;
+		
+		if(Calculus1 != 0)
+			averageCount += 1;
+		if(Calculus2 != 0)
+			averageCount += 1;
+		if(Physics != 0)
+			averageCount += 1;
+		if(BCC != 0)
+			averageCount += 1;
+		if(CProgramming != 0)
+			averageCount += 1;
+		if(DigitalCreative != 0)
+			averageCount += 1;
+		if(Java != 0)
+			averageCount += 1;
 				
 		gradeCounter += Calculus1 + Calculus2 + Physics + BCC + CProgramming + DigitalCreative + Java;
 		//計算區塊2
@@ -1157,6 +1335,21 @@ public class main extends JFrame implements ActionListener {
 		if(DigitalMedi >= 60)
 			point += 3;
 
+		if(DataStructure != 0)
+			averageCount += 1;
+		if(CreativeTend != 0)
+			averageCount += 1;
+		if(InternetCreative != 0)
+			averageCount += 1;
+		if(CreativeMath != 0)
+			averageCount += 1;
+		if(InteractionDesign != 0)
+			averageCount += 1;
+		if(DigitalMaterial != 0)
+			averageCount += 1;
+		if(DigitalMedi != 0)
+			averageCount += 1;
+
 					
 		gradeCounter += DataStructure + CreativeTend + InternetCreative + CreativeMath + InteractionDesign + DigitalMaterial + DigitalMedi;
 		//計算區塊3
@@ -1169,6 +1362,13 @@ public class main extends JFrame implements ActionListener {
 			point += 3;
 		if(OS >= 60)
 			point += 3;
+		
+		if(ComputerInternet != 0)
+			averageCount += 1;
+		if(Algorithm != 0)
+			averageCount += 1;
+		if(OS != 0)
+			averageCount += 1;
 						
 		gradeCounter += ComputerInternet + Algorithm + OS;
 		
@@ -1197,6 +1397,23 @@ public class main extends JFrame implements ActionListener {
 			point += 2;
 		if(FinalProgram >= 60)
 			point += 2;
+		
+		if(TechEng != 0)
+			averageCount += 1;
+		if(EmbeddedSystem != 0)
+			averageCount += 1;
+		if(ProtableDevice != 0)
+			averageCount += 1;
+		if(Database != 0)
+			averageCount += 1;
+		if(Logic != 0)
+			averageCount += 1;
+		if(Logiclab != 0)
+			averageCount += 1;
+		if(FinalProgram1 != 0)
+			averageCount += 1;
+		if(FinalProgram != 0)
+			averageCount += 1;
 		
 		gradeCounter += TechEng + EmbeddedSystem + ProtableDevice + Database + Logic + Logiclab + FinalProgram1 + FinalProgram;
 		//
@@ -1238,26 +1455,39 @@ public class main extends JFrame implements ActionListener {
 			point += 3;
 		
 		//有分數的才算進成績
-		if(OOPD != 0)
-			gradeCounter += OOPD;
-		if(SM != 0)
-			gradeCounter += SM;
-		if(Web != 0)
-			gradeCounter += Web;
-		if(ADS != 0)
-			gradeCounter += ADS;
-		if(SLC != 0)
-			gradeCounter += SLC;
-		if(UI != 0)
-			gradeCounter += UI;
-		if(SS != 0)
-			gradeCounter += SS;
-		if(CC != 0)
-			gradeCounter += CC;
-		if(ALogic != 0)
-			gradeCounter += ALogic;
-		if(Wifi != 0)
-			gradeCounter += Wifi;
+		if(OOPD != 0){
+			averageCount += 1;
+			gradeCounter += OOPD;}
+		if(SM != 0){
+			averageCount += 1;
+			gradeCounter += SM;}
+		if(Web != 0){
+			averageCount += 1;
+			gradeCounter += Web;}
+		if(UX != 0){
+			averageCount += 1;
+			gradeCounter += UX;}
+		if(ADS != 0){
+			averageCount += 1;
+			gradeCounter += ADS;}
+		if(SLC != 0){
+			averageCount += 1;
+			gradeCounter += SLC;}
+		if(UI != 0){
+			averageCount += 1;
+			gradeCounter += UI;}
+		if(SS != 0){
+			averageCount += 1;
+			gradeCounter += SS;}
+		if(CC != 0){
+			averageCount += 1;
+			gradeCounter += CC;}
+		if(ALogic != 0){
+			averageCount += 1;
+			gradeCounter += ALogic;}
+		if(Wifi != 0){
+			averageCount += 1;
+			gradeCounter += Wifi;}
 		
 		//計算區塊2
 		Integer VLSI =  Integer.parseInt(VLSITextField.getText());
@@ -1279,18 +1509,24 @@ public class main extends JFrame implements ActionListener {
 		if(Video >= 60)
 			point += 3;
 		//有分數的才算進成績
-		if(VLSI != 0)
-			gradeCounter += VLSI;
-		if(Emb != 0)
-			gradeCounter += Emb;
-		if(Signal != 0)
-			gradeCounter += Signal;
-		if(Creative != 0)
-			gradeCounter += Creative;
-		if(Social != 0)
-			gradeCounter += Social;
-		if(Video != 0)
-			gradeCounter += Video;
+		if(VLSI != 0){
+			averageCount += 1;
+			gradeCounter += VLSI;}
+		if(Emb != 0){
+			averageCount += 1;
+			gradeCounter += Emb;}
+		if(Signal != 0){
+			averageCount += 1;
+			gradeCounter += Signal;}
+		if(Creative != 0){
+			averageCount += 1;
+			gradeCounter += Creative;}
+		if(Social != 0){
+			averageCount += 1;
+			gradeCounter += Social;}
+		if(Video != 0){
+			averageCount += 1;
+			gradeCounter += Video;}
 		
 			
 	}
@@ -1348,7 +1584,13 @@ public class main extends JFrame implements ActionListener {
 		String pointS = point.toString();
 		sum.setText(pointS);
 		
+		//AVG
+		average = gradeCounter / averageCount;
+		String averageS = String.valueOf(average);//double to string
+		avg.setText(averageS);
 		
+		System.out.println(gradeCounter);
+		System.out.println(averageCount);
 		
 		//通識門檻檢查
 		Integer Box1 = selectBox1.getSelectedIndex();
