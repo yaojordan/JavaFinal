@@ -2,9 +2,11 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.Random;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class main extends JFrame implements ActionListener {
@@ -169,10 +171,10 @@ public class main extends JFrame implements ActionListener {
 	
 	//必修必選(MEDI)
 	static Label DigitalCreativeLab = new Label("數位創新導論");
-	static Label CreativeTendLab = new Label("創意設計趨勢與方法");
+	static Label CreativeTendLab = new Label("創意設計趨勢方法");
 	static Label InternetCreativeLab = new Label("網際網路創新應用");
 	static Label CreativeMathLab = new Label("創意數學");
-	static Label InteractionDesignLab = new Label("資訊美學與互動設計");
+	static Label InteractionDesignLab = new Label("資訊美學互動設計");
 	static Label DigitalMaterialLab = new Label("數位創意材料");
 	static Label DigitalMediLab = new Label("數位多媒體");
 	static Label EmbeddedSystemLab = new Label("嵌入式系統導論");//必修必選(ELEC)
@@ -210,12 +212,22 @@ public class main extends JFrame implements ActionListener {
 	public static void main(String args[])
 	{
 		CheckboxGroup ckbGrp = new CheckboxGroup();
+		Label title = new Label("請輸入基本資料");
 		Label lab1 = new Label("姓名：");
 		Label lab2 = new Label("學號：");
 		frame_page1.setSize(600,500);
 		
 		p1.setLayout(null);//要自定義排版, 因此先設定布局為null
 		
+		//外觀美化
+		JLabel img = new JLabel(new ImageIcon("img.png"));
+		p1.setBackground(Color.white);
+		title.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 24));
+		lab1.setFont(new Font(Font.DIALOG, Font.BOLD, 14));
+		lab2.setFont(new Font(Font.DIALOG, Font.BOLD, 14));
+		
+		img.setBounds(20, 380, 310, 60);
+		title.setBounds(210, 40, 180, 50);
 		lab1.setBounds(210, 120, 50, 20);
 		nameTextField.setBounds(270,120,100,20);
 		lab2.setBounds(210, 165, 50, 20);
@@ -234,6 +246,8 @@ public class main extends JFrame implements ActionListener {
 		//預設選取軟工組
 		ckbSOFT.setState(true);
 		
+		p1.add(img);
+		p1.add(title);
 		p1.add(lab1);
 		p1.add(lab2);
 		p1.add(nameTextField);
@@ -257,7 +271,18 @@ public class main extends JFrame implements ActionListener {
 		p1.setVisible(false);
 		p2.setLayout(null);
 		
-		lab1.setBounds(260, 30, 50, 20);
+		p2.setBackground(Color.white);
+		lab1.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 24));
+		ChineseLab1.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		ChineseLab2.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		EnglishLab1.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		EnglishLab2.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		English2Lab1.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		English2Lab2.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		HistoryLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		SocialLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		
+		lab1.setBounds(210, 30, 180, 30);
 		ChineseLab1.setBounds(210, 80, 50, 20);
 		ChineseTextField1.setBounds(270,80,30,20);
 		ChineseLab2.setBounds(210, 110, 50, 20);
@@ -310,21 +335,24 @@ public class main extends JFrame implements ActionListener {
 		p2.setVisible(false);
 		p3.setLayout(null);
 		
-		lab1.setBounds(260, 30, 50, 20);
+		p3.setBackground(Color.white);
+		lab1.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 24));
+		
+		lab1.setBounds(240, 30, 180, 30);
 		selectBox1.setBounds(210, 80, 108, 20);
-		GeneralCourse1.setBounds(320, 80, 30, 20);
+		GeneralCourse1.setBounds(330, 80, 30, 20);
 		selectBox2.setBounds(210, 110, 108, 20);
-		GeneralCourse2.setBounds(320, 110, 30, 20);
+		GeneralCourse2.setBounds(330, 110, 30, 20);
 		selectBox3.setBounds(210, 140, 108, 20);
-		GeneralCourse3.setBounds(320, 140, 30, 20);
+		GeneralCourse3.setBounds(330, 140, 30, 20);
 		selectBox4.setBounds(210, 170, 108, 20);
-		GeneralCourse4.setBounds(320, 170, 30, 20);
+		GeneralCourse4.setBounds(330, 170, 30, 20);
 		selectBox5.setBounds(210, 200, 108, 20);
-		GeneralCourse5.setBounds(320, 200, 30, 20);
+		GeneralCourse5.setBounds(330, 200, 30, 20);
 		selectBox6.setBounds(210, 230, 108, 20);
-		GeneralCourse6.setBounds(320, 230, 30, 20);
+		GeneralCourse6.setBounds(330, 230, 30, 20);
 		selectBox7.setBounds(210, 260, 108, 20);
-		GeneralCourse7.setBounds(320, 260, 30, 20);
+		GeneralCourse7.setBounds(330, 260, 30, 20);
 		nextBtn3.setBounds(475, 400, 80, 30);
 		String str[]={"請點選領域", "人文學科", "社會學科", "自然學科", "文明經典領域學科"} ;  
 		for(int i=0; i < str.length; i++)
@@ -366,7 +394,39 @@ public class main extends JFrame implements ActionListener {
 		p3.setVisible(false);
 		Label title = new Label("軟工組");
 		p4.setLayout(null);
-		title.setBounds(260, 30, 50, 20);
+		title.setBounds(240, 20, 180, 30);
+		
+		p4.setBackground(Color.white);
+		title.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 24));
+		CalculusLab1.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		CalculusLab2.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		PhysicsLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		BCCLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		CProgrammingLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		SoftwareLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		JavaLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		DataStructureLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		DiscreteLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		ElectricLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		ElectriclabLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		SystemAssemblyLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		ProbabilityLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		LinearAlgebraLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		ProgrammingLanguageLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		TechEngLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		OOPLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		LogicLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		LogiclabLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		ComputerOrganLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		ComputerInternetLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		AlgorithmLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		OSLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		DatabaseLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		SoftTestLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		CompilerLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		FinalProgram1Lab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		FinalProgramLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		
 		
 		CalculusLab1.setBounds(20, 80, 100, 20);
 		CalculusTextField1.setBounds(120, 80, 30, 20);
@@ -398,29 +458,29 @@ public class main extends JFrame implements ActionListener {
 
 		
 		DataStructureLab.setBounds(200, 80, 100, 20);
-		DataStructureTextField.setBounds(300, 80, 30, 20);
+		DataStructureTextField.setBounds(310, 80, 30, 20);
 		DiscreteLab.setBounds(200, 110, 100, 20);
-		DiscreteTextField.setBounds(300, 110, 30, 20);
+		DiscreteTextField.setBounds(310, 110, 30, 20);
 		ElectricLab.setBounds(200, 140, 100, 20);
-		ElectricTextField.setBounds(300, 140, 30, 20);
+		ElectricTextField.setBounds(310, 140, 30, 20);
 		ElectriclabLab.setBounds(200, 170, 100, 20);
-		ElectriclabTextField.setBounds(300, 170, 30, 20);
-		SystemAssemblyLab.setBounds(200, 200, 100, 20);
-		SystemAssemblyTextField.setBounds(300, 200, 30, 20);
+		ElectriclabTextField.setBounds(310, 170, 30, 20);
+		SystemAssemblyLab.setBounds(200, 200, 110, 20);
+		SystemAssemblyTextField.setBounds(310, 200, 30, 20);
 		ProbabilityLab.setBounds(200, 230, 100, 20);
-		ProbabilityTextField.setBounds(300, 230, 30, 20);
+		ProbabilityTextField.setBounds(310, 230, 30, 20);
 		LinearAlgebraLab.setBounds(200, 260, 100, 20);
-		LinearAlgebraTextField.setBounds(300, 260, 30, 20);
+		LinearAlgebraTextField.setBounds(310, 260, 30, 20);
 		ProgrammingLanguageLab.setBounds(200, 290, 100, 20);
-		ProgrammingLanguageTextField.setBounds(300, 290, 30, 20);
-		TechEngLab.setBounds(200, 320, 100, 20);
-		TechEngTextField.setBounds(300, 320, 30, 20);
-		OOPLab.setBounds(200, 350, 100, 20);
-		OOPTextField.setBounds(300, 350, 30, 20);
+		ProgrammingLanguageTextField.setBounds(310, 290, 30, 20);
+		TechEngLab.setBounds(200, 320, 110, 20);
+		TechEngTextField.setBounds(310, 320, 30, 20);
+		OOPLab.setBounds(200, 350, 110, 20);
+		OOPTextField.setBounds(310, 350, 30, 20);
 		LogicLab.setBounds(200, 380, 100, 20);
-		LogicTextField.setBounds(300, 380, 30, 20);
-		LogiclabLab.setBounds(200, 410, 100, 20);
-		LogiclabTextField.setBounds(300, 410, 30, 20);
+		LogicTextField.setBounds(310, 380, 30, 20);
+		LogiclabLab.setBounds(200, 410, 110, 20);
+		LogiclabTextField.setBounds(310, 410, 30, 20);
 		p4.add(DataStructureLab);
 		p4.add(DataStructureTextField);
 		p4.add(DiscreteLab);
@@ -503,8 +563,41 @@ public class main extends JFrame implements ActionListener {
 		p3.setVisible(false);
 		Label title = new Label("資電組");
 		p4.setLayout(null);
-		title.setBounds(260, 30, 50, 20);
 		p4.add(title);
+		
+		title.setBounds(240, 20, 180, 30);
+		p4.setBackground(Color.white);
+		title.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 24));
+		CalculusLab1.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		CalculusLab2.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		PhysicsLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		BCCLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		CProgrammingLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		ElectricLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		ElectriclabLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		JavaLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		DataStructureLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		DiscreteLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		LogicLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		LogiclabLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		EmbeddedSystemLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		SystemAssemblyLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		HardwareLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		ProbabilityLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		LinearAlgebraLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		ProgrammingLanguageLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		TechEngLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		ComputerOrganLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		ComputerInternetLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		AlgorithmLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		OSLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		DatabaseLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		MicroProcessorLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		MicroProcessorlabLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		CompilerLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		FinalProgram1Lab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		FinalProgramLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		
 		
 		CalculusLab1.setBounds(20, 80, 100, 20);
 		CalculusTextField1.setBounds(120, 80, 30, 20);
@@ -538,27 +631,27 @@ public class main extends JFrame implements ActionListener {
 		p4.add(ElectriclabTextField);
 		
 		DataStructureLab.setBounds(200, 80, 100, 20);
-		DataStructureTextField.setBounds(300, 80, 30, 20);
+		DataStructureTextField.setBounds(310, 80, 30, 20);
 		DiscreteLab.setBounds(200, 110, 100, 20);
-		DiscreteTextField.setBounds(300, 110, 30, 20);
+		DiscreteTextField.setBounds(310, 110, 30, 20);
 		LogicLab.setBounds(200, 140, 100, 20);
-		LogicTextField.setBounds(300, 140, 30, 20);
+		LogicTextField.setBounds(310, 140, 30, 20);
 		LogiclabLab.setBounds(200, 170, 100, 20);
-		LogiclabTextField.setBounds(300, 170, 30, 20);
+		LogiclabTextField.setBounds(310, 170, 30, 20);
 		EmbeddedSystemLab.setBounds(200, 200, 100, 20);
-		EmbeddedSystemTextField.setBounds(300, 200, 30, 20);
-		SystemAssemblyLab.setBounds(200, 230, 100, 20);
-		SystemAssemblyTextField.setBounds(300, 230, 30, 20);
+		EmbeddedSystemTextField.setBounds(310, 200, 30, 20);
+		SystemAssemblyLab.setBounds(200, 230, 110, 20);
+		SystemAssemblyTextField.setBounds(310, 230, 30, 20);
 		ProbabilityLab.setBounds(200, 260, 100, 20);
-		ProbabilityTextField.setBounds(300, 260, 30, 20);
+		ProbabilityTextField.setBounds(310, 260, 30, 20);
 		LinearAlgebraLab.setBounds(200, 290, 100, 20);
-		LinearAlgebraTextField.setBounds(300, 290, 30, 20);
-		HardwareLab.setBounds(200, 320, 100, 20);
-		HardwareTextField.setBounds(300, 320, 30, 20);
+		LinearAlgebraTextField.setBounds(310, 290, 30, 20);
+		HardwareLab.setBounds(200, 320, 110, 20);
+		HardwareTextField.setBounds(310, 320, 30, 20);
 		ProgrammingLanguageLab.setBounds(200, 350, 100, 20);
-		ProgrammingLanguageTextField.setBounds(300, 350, 30, 20);
-		TechEngLab.setBounds(200, 380, 100, 20);
-		TechEngTextField.setBounds(300, 380, 30, 20);
+		ProgrammingLanguageTextField.setBounds(310, 350, 30, 20);
+		TechEngLab.setBounds(200, 380, 110, 20);
+		TechEngTextField.setBounds(310, 380, 30, 20);
 		p4.add(DataStructureLab);
 		p4.add(DataStructureTextField);
 		p4.add(DiscreteLab);
@@ -640,8 +733,37 @@ public class main extends JFrame implements ActionListener {
 		p3.setVisible(false);
 		Label title = new Label("數創組");
 		p4.setLayout(null);
-		title.setBounds(260, 30, 50, 20);
 		p4.add(title);
+		
+		title.setBounds(240, 20, 180, 30);
+		p4.setBackground(Color.white);
+		title.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 24));
+		CalculusLab1.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		CalculusLab2.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		PhysicsLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		BCCLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		CProgrammingLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		DigitalCreativeLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		JavaLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		DataStructureLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		CreativeTendLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		InternetCreativeLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		LogiclabLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		CreativeMathLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		InteractionDesignLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		DigitalMaterialLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		DigitalMediLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		LogicLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		LogiclabLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		EmbeddedSystemLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		TechEngLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		ComputerInternetLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		AlgorithmLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		OSLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		DatabaseLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		ProtableDeviceLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		FinalProgram1Lab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		FinalProgramLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
 		
 		
 		CalculusLab1.setBounds(20, 80, 100, 20);
@@ -675,27 +797,27 @@ public class main extends JFrame implements ActionListener {
 
 		
 		DataStructureLab.setBounds(200, 80, 100, 20);
-		DataStructureTextField.setBounds(300, 80, 30, 20);
-		CreativeTendLab.setBounds(200, 110, 100, 20);
-		CreativeTendTextField.setBounds(300, 110, 30, 20);
-		InternetCreativeLab.setBounds(200, 140, 100, 20);
-		InternetCreativeTextField.setBounds(300, 140, 30, 20);
+		DataStructureTextField.setBounds(310, 80, 30, 20);
+		CreativeTendLab.setBounds(200, 110, 110, 20);
+		CreativeTendTextField.setBounds(310, 110, 30, 20);
+		InternetCreativeLab.setBounds(200, 140, 110, 20);
+		InternetCreativeTextField.setBounds(310, 140, 30, 20);
 		CreativeMathLab.setBounds(200, 170, 100, 20);
-		CreativeMathTextField.setBounds(300, 170, 30, 20);
-		InteractionDesignLab.setBounds(200, 200, 100, 20);
-		InteractionDesignTextField.setBounds(300, 200, 30, 20);
+		CreativeMathTextField.setBounds(310, 170, 30, 20);
+		InteractionDesignLab.setBounds(200, 200, 110, 20);
+		InteractionDesignTextField.setBounds(310, 200, 30, 20);
 		DigitalMaterialLab.setBounds(200, 230, 100, 20);
-		DigitalMaterialTextField.setBounds(300, 230, 30, 20);
+		DigitalMaterialTextField.setBounds(310, 230, 30, 20);
 		DigitalMediLab.setBounds(200, 260, 100, 20);
-		DigitalMediTextField.setBounds(300, 260, 30, 20);
+		DigitalMediTextField.setBounds(310, 260, 30, 20);
 		LogicLab.setBounds(200, 290, 100, 20);
-		LogicTextField.setBounds(300, 290, 30, 20);
+		LogicTextField.setBounds(310, 290, 30, 20);
 		LogiclabLab.setBounds(200, 320, 100, 20);
-		LogiclabTextField.setBounds(300, 320, 30, 20);
+		LogiclabTextField.setBounds(310, 320, 30, 20);
 		EmbeddedSystemLab.setBounds(200, 350, 100, 20);
-		EmbeddedSystemTextField.setBounds(300, 350, 30, 20);
-		TechEngLab.setBounds(200, 380, 100, 20);
-		TechEngTextField.setBounds(300, 380, 30, 20);
+		EmbeddedSystemTextField.setBounds(310, 350, 30, 20);
+		TechEngLab.setBounds(200, 380, 110, 20);
+		TechEngTextField.setBounds(310, 380, 30, 20);
 		p4.add(DataStructureLab);
 		p4.add(DataStructureTextField);
 		p4.add(CreativeTendLab);
@@ -711,21 +833,21 @@ public class main extends JFrame implements ActionListener {
 		p4.add(DigitalMediLab);
 		p4.add(DigitalMediTextField);
 
-		
-		ComputerInternetLab.setBounds(380, 80, 100, 20);
-		ComputerInternetTextField.setBounds(480, 80, 30, 20);
-		AlgorithmLab.setBounds(380, 110, 100, 20);
-		AlgorithmTextField.setBounds(480, 110, 30, 20);
-		OSLab.setBounds(380, 140, 100, 20);
-		OSTextField.setBounds(480, 140, 30, 20);
-		ProtableDeviceLab.setBounds(380, 170, 100, 20);
-		ProtableDeviceTextField.setBounds(480, 170, 30, 20);
-		DatabaseLab.setBounds(380, 200, 100, 20);
-		DatabaseTextField.setBounds(480, 200, 30, 20);
-		FinalProgram1Lab.setBounds(380, 230, 100, 20);
-		FinalProgram1TextField.setBounds(480, 230, 30, 20);
-		FinalProgramLab.setBounds(380, 260, 100, 20);
-		FinalProgramTextField.setBounds(480, 260, 30, 20);
+
+		ComputerInternetLab.setBounds(380, 80, 110, 20);
+		ComputerInternetTextField.setBounds(490, 80, 30, 20);
+		AlgorithmLab.setBounds(380, 110, 110, 20);
+		AlgorithmTextField.setBounds(490, 110, 30, 20);
+		OSLab.setBounds(380, 140, 110, 20);
+		OSTextField.setBounds(490, 140, 30, 20);
+		ProtableDeviceLab.setBounds(380, 170, 110, 20);
+		ProtableDeviceTextField.setBounds(490, 170, 30, 20);
+		DatabaseLab.setBounds(380, 200, 110, 20);
+		DatabaseTextField.setBounds(490, 200, 30, 20);
+		FinalProgram1Lab.setBounds(380, 230, 110, 20);
+		FinalProgram1TextField.setBounds(490, 230, 30, 20);
+		FinalProgramLab.setBounds(380, 260, 110, 20);
+		FinalProgramTextField.setBounds(490, 260, 30, 20);
 		p4.add(ComputerInternetLab);
 		p4.add(ComputerInternetTextField);
 		p4.add(AlgorithmLab);
@@ -765,32 +887,52 @@ public class main extends JFrame implements ActionListener {
 		
 		Label title = new Label("選修課程");
 		p5.setLayout(null);
-		title.setBounds(260, 30, 50, 20);
 		
-		OOPDLab.setBounds(20, 80, 100, 20);
-		OOPDTextField.setBounds(120, 80, 30, 20);
+		title.setBounds(240, 20, 180, 30);
+		p5.setBackground(Color.white);
+		title.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 24));
+		OOPDLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		SMLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		WebPLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		UXLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		ADSLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		SLCLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		UILab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		SSLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		CCLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		ALogicLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		WifiLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		VLSILab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		EmbLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		SignalLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		CreativeLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		SocialNetLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		VideoLab.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
+		
+		OOPDLab.setBounds(20, 80, 110, 20);
+		OOPDTextField.setBounds(130, 80, 30, 20);
 		SMLab.setBounds(20, 110, 100, 20);
-		SMLTextField.setBounds(120, 110, 30, 20);
+		SMLTextField.setBounds(130, 110, 30, 20);
 		WebPLab.setBounds(20, 140, 100, 20);
-		WebPTextField.setBounds(120, 140, 30, 20);
+		WebPTextField.setBounds(130, 140, 30, 20);
 		UXLab.setBounds(20, 170, 100, 20);
-		UXTextField.setBounds(120, 170, 30, 20);
+		UXTextField.setBounds(130, 170, 30, 20);
 		ADSLab.setBounds(20, 200, 100, 20);
-		ADSTextField.setBounds(120, 200, 30, 20);
-		SLCLab.setBounds(20, 230, 100, 20);
-		SLCTextField.setBounds(120, 230, 30, 20);
+		ADSTextField.setBounds(130, 200, 30, 20);
+		SLCLab.setBounds(20, 230, 110, 20);
+		SLCTextField.setBounds(130, 230, 30, 20);
 		UILab.setBounds(20, 260, 100, 20);
-		UITextField.setBounds(120, 260, 30, 20);
+		UITextField.setBounds(130, 260, 30, 20);
 		SSLab.setBounds(20, 290, 100, 20);
-		SSTextField.setBounds(120, 290, 30, 20);
+		SSTextField.setBounds(130, 290, 30, 20);
 		CCLab.setBounds(20, 320, 100, 20);
-		CCTextField.setBounds(120, 320, 30, 20);
+		CCTextField.setBounds(130, 320, 30, 20);
 		//ProtableDeviceLab.setBounds(20, 350, 100, 20);
 		//ProtableDeviceTextField.setBounds(120, 350, 30, 20);
 		ALogicLab.setBounds(20, 350, 100, 20);
-		ALogicTextField.setBounds(120, 350, 30, 20);
+		ALogicTextField.setBounds(130, 350, 30, 20);
 		WifiLab.setBounds(20, 380, 100, 20);
-		WifiTextField.setBounds(120, 380, 30, 20);
+		WifiTextField.setBounds(130, 380, 30, 20);
 		p5.add(title);
 		p5.add(OOPDLab);
 		p5.add(OOPDTextField);
@@ -818,17 +960,17 @@ public class main extends JFrame implements ActionListener {
 		p5.add(WifiTextField);
 		
 		VLSILab.setBounds(200, 80, 100, 20);
-		VLSITextField.setBounds(300, 80, 30, 20);
+		VLSITextField.setBounds(310, 80, 30, 20);
 		EmbLab.setBounds(200, 110, 100, 20);
-		EmbTextField.setBounds(300, 110, 30, 20);
-		SignalLab.setBounds(200, 140, 100, 20);
-		SignalTextField.setBounds(300, 140, 30, 20);
+		EmbTextField.setBounds(310, 110, 30, 20);
+		SignalLab.setBounds(200, 140, 110, 20);
+		SignalTextField.setBounds(310, 140, 30, 20);
 		CreativeLab.setBounds(200, 170, 100, 20);
-		CreativeTextField.setBounds(300, 170, 30, 20);
+		CreativeTextField.setBounds(310, 170, 30, 20);
 		SocialNetLab.setBounds(200, 200, 100, 20);
-		SocialNetTextField.setBounds(300, 200, 30, 20);
-		VideoLab.setBounds(200, 230, 100, 20);
-		VideoTextField.setBounds(300, 230, 30, 20);
+		SocialNetTextField.setBounds(310, 200, 30, 20);
+		VideoLab.setBounds(200, 230, 110, 20);
+		VideoTextField.setBounds(310, 230, 30, 20);
 		p5.add(VLSILab);
 		p5.add(VLSITextField);
 		p5.add(EmbLab);
