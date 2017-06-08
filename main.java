@@ -1677,6 +1677,7 @@ public class main extends JFrame implements ActionListener {
 	public static void showResult(String[] args) {
 		p6.setVisible(true);
 		p5.setVisible(false);
+		Label title = new Label("計算結果");
 		Label lab1 = new Label("姓名：");
 		Label lab2 = new Label("學號：");
 		Label lab3 = new Label("學分數：");
@@ -1684,20 +1685,31 @@ public class main extends JFrame implements ActionListener {
 		Label lab5 = new Label("結果：");
 		p6.setLayout(null);
 		
-		lab1.setBounds(200, 80, 60, 20);
-		name.setBounds(280, 80, 70, 20);
-		lab2.setBounds(200, 110, 60, 20);
-		num.setBounds(280, 110, 70, 20);
-		lab3.setBounds(200, 140, 60, 20);
-		sum.setBounds(280, 140, 70, 20);
-		lab4.setBounds(200, 170, 60, 20);
-		avg.setBounds(280, 170, 70, 20);
-		lab5.setBounds(200, 200, 60, 20);
-		result.setBounds(280, 200, 120, 20);
+		p6.setBackground(Color.white);
+		title.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 24));
+		lab1.setFont(new Font(Font.DIALOG, Font.BOLD, 14));
+		lab2.setFont(new Font(Font.DIALOG, Font.BOLD, 14));
+		lab3.setFont(new Font(Font.DIALOG, Font.BOLD, 14));
+		lab4.setFont(new Font(Font.DIALOG, Font.BOLD, 14));
+		lab5.setFont(new Font(Font.DIALOG, Font.BOLD, 14));
+		
+		
+		title.setBounds(240, 30, 180, 50);
+		lab1.setBounds(200, 90, 60, 20);
+		name.setBounds(280, 90, 70, 20);
+		lab2.setBounds(200, 120, 60, 20);
+		num.setBounds(280, 120, 70, 20);
+		lab3.setBounds(200, 150, 60, 20);
+		sum.setBounds(280, 150, 70, 20);
+		lab4.setBounds(200, 180, 80, 20);
+		avg.setBounds(280, 180, 70, 20);
+		lab5.setBounds(200, 210, 60, 20);
+		result.setBounds(280, 210, 120, 20);
 		
 		name.setText(nameTextField.getText());
 		num.setText(numberTextField.getText());
 		
+		p6.add(title);
 		p6.add(lab1);
 		p6.add(name);
 		p6.add(lab2);
@@ -1762,10 +1774,18 @@ public class main extends JFrame implements ActionListener {
 		
 		if(point > 128 && GeneralFinish == true)
 		{
+			JLabel img = new JLabel(new ImageIcon("pass.png"));
+			img.setBounds(160, 280, 160, 160);
+			p6.add(img);
+			result.setForeground(Color.GREEN);
 			result.setText("通過系畢業門檻");
 		}
 		else
 		{
+			JLabel img = new JLabel(new ImageIcon("fail.png"));
+			img.setBounds(160, 280, 160, 160);
+			p6.add(img);
+			result.setForeground(Color.RED);
 			result.setText("尚未通過系畢業門檻");
 		}
 		
