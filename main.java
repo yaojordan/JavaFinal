@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 public class main extends JFrame implements ActionListener {
 	
 	static int stepCount = 0;
-	static main frame_page1 = new main();
+	static main frame_page1 = new main();//主要的frame
 	
 	static JPanel p1 = new JPanel();
 	static JPanel p2 = new JPanel();
@@ -26,6 +26,10 @@ public class main extends JFrame implements ActionListener {
 	static JButton nextBtn3 = new JButton("下一步"); 
 	static JButton nextBtn4 = new JButton("下一步"); 
 	static JButton nextBtn5 = new JButton("完成"); 
+	static JButton prevBtn1 = new JButton("上一步"); 
+	static JButton prevBtn2 = new JButton("上一步"); 
+	static JButton prevBtn3 = new JButton("上一步"); 
+	static JButton prevBtn4 = new JButton("上一步"); 
 	
 	static Checkbox ckbSOFT = new Checkbox("軟工組");
 	static Checkbox ckbELEC = new Checkbox("資電組");	
@@ -211,12 +215,14 @@ public class main extends JFrame implements ActionListener {
 	//第一步驟頁面
 	public static void main(String args[])
 	{
+		stepCount = 0;
 		CheckboxGroup ckbGrp = new CheckboxGroup();
 		Label title = new Label("請輸入基本資料");
 		Label lab1 = new Label("姓名：");
 		Label lab2 = new Label("學號：");
 		frame_page1.setSize(600,500);
 		
+		p1.setVisible(true);
 		p1.setLayout(null);//要自定義排版, 因此先設定布局為null
 		
 		//外觀美化
@@ -237,7 +243,7 @@ public class main extends JFrame implements ActionListener {
 		ckbMEDI.setBounds(270, 270, 50, 20);
 		nextBtn1.setBounds(475, 400, 80, 30);
 		
-		nextBtn1.addActionListener(frame_page1);
+		
 			
 		//組別三選一
 		ckbSOFT.setCheckboxGroup(ckbGrp);
@@ -257,15 +263,14 @@ public class main extends JFrame implements ActionListener {
 		p1.add(ckbMEDI);
 		p1.add(nextBtn1);
 		
-		p1.setVisible(true);
-		frame_page1.add(p1);
+		nextBtn1.addActionListener(frame_page1);
+		
 		frame_page1.setVisible(true);
+		frame_page1.add(p1);
 	}
 	//基礎必修
 	public static void firstStep(String[] args) {
 		stepCount = 1;
-		//GridLayout grid = new GridLayout(6,3);
-		//p2.setLayout(grid);
 		Label lab1 = new Label("基礎必修課程");
 		p2.setVisible(true);
 		p1.setVisible(false);
@@ -300,6 +305,7 @@ public class main extends JFrame implements ActionListener {
 		HistoryTextField.setBounds(310, 260, 30, 20);
 		SocialLab.setBounds(210, 290, 100, 20);
 		SocialTextField.setBounds(310, 290, 30, 20);
+		prevBtn1.setBounds(375, 400, 80, 30);
 		nextBtn2.setBounds(475, 400, 80, 30);
 		
 		p2.add(lab1);
@@ -319,11 +325,22 @@ public class main extends JFrame implements ActionListener {
 		p2.add(HistoryTextField);
 		p2.add(SocialLab);
 		p2.add(SocialTextField);
+		p2.add(prevBtn1);
 		p2.add(nextBtn2);
 		
+		//previous page
+		prevBtn1.addActionListener(new ActionListener() {
+	        public void actionPerformed(ActionEvent e) {      	
+	    		p2.setVisible(false);
+	    		//p1.setVisible(true);
+	        	main(null);
+	    		stepCount = 0;
+	        }
+	    });
 		
-		
+		//next page
 		nextBtn2.addActionListener(frame_page1);
+		
 		frame_page1.add(p2);
 		frame_page1.setVisible(true);
 	}
@@ -353,6 +370,7 @@ public class main extends JFrame implements ActionListener {
 		GeneralCourse6.setBounds(330, 230, 30, 20);
 		selectBox7.setBounds(210, 260, 108, 20);
 		GeneralCourse7.setBounds(330, 260, 30, 20);
+		prevBtn2.setBounds(375, 400, 80, 30);
 		nextBtn3.setBounds(475, 400, 80, 30);
 		String str[]={"請點選領域", "人文學科", "社會學科", "自然學科", "文明經典領域學科"} ;  
 		for(int i=0; i < str.length; i++)
@@ -380,9 +398,18 @@ public class main extends JFrame implements ActionListener {
 		p3.add(GeneralCourse6);
 		p3.add(selectBox7);
 		p3.add(GeneralCourse7);
+		p3.add(prevBtn2);
 		p3.add(nextBtn3);
 		
-		
+		//previous page
+		prevBtn2.addActionListener(new ActionListener() {
+			 public void actionPerformed(ActionEvent e) {      	
+			    p3.setVisible(false);
+			    p2.setVisible(true);
+			    stepCount = 1;
+			}
+		});
+		//next page
 		nextBtn3.addActionListener(frame_page1);
 		frame_page1.add(p3);
 		frame_page1.setVisible(true);
@@ -548,7 +575,19 @@ public class main extends JFrame implements ActionListener {
 		p4.add(FinalProgramLab);
 		p4.add(FinalProgramTextField);
 		
+		prevBtn3.setBounds(375, 400, 80, 30);
+		p4.add(prevBtn3);
 		
+		//previous page
+		prevBtn3.addActionListener(new ActionListener() {
+	        public void actionPerformed(ActionEvent e) {      	
+	    		p4.setVisible(false);
+	    		p3.setVisible(true);
+	    		stepCount = 2;
+	        }
+	    });
+		
+		//next page
 		nextBtn4.setBounds(475, 400, 80, 30);
 		p4.add(nextBtn4);
 		
@@ -720,6 +759,19 @@ public class main extends JFrame implements ActionListener {
 		p4.add(FinalProgramLab);
 		p4.add(FinalProgramTextField);
 		
+		
+		prevBtn3.setBounds(375, 400, 80, 30);
+		p4.add(prevBtn3);
+		//previous page
+		prevBtn3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {      	
+			  		p4.setVisible(false);
+			   		p3.setVisible(true);
+			   		stepCount = 2;
+			}
+		});
+				
+		//next page
 		nextBtn4.setBounds(475, 400, 80, 30);
 		p4.add(nextBtn4);
 		nextBtn4.addActionListener(frame_page1);
@@ -871,7 +923,19 @@ public class main extends JFrame implements ActionListener {
 		p4.add(FinalProgram1TextField);
 		p4.add(FinalProgramLab);
 		p4.add(FinalProgramTextField);
-
+		
+		prevBtn3.setBounds(375, 400, 80, 30);
+		p4.add(prevBtn3);
+		//previous page
+		prevBtn3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {      	
+			  		p4.setVisible(false);
+			   		p3.setVisible(true);
+			   		stepCount = 2;
+			}
+		});
+				
+		//next page
 		nextBtn4.setBounds(475, 400, 80, 30);
 		p4.add(nextBtn4);
 		nextBtn4.addActionListener(frame_page1);
@@ -984,7 +1048,18 @@ public class main extends JFrame implements ActionListener {
 		p5.add(VideoLab);
 		p5.add(VideoTextField);
 
-		
+		prevBtn4.setBounds(375, 400, 80, 30);
+		p5.add(prevBtn4);
+		//previous page
+		prevBtn4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {      	
+				p5.setVisible(false);
+			   	p4.setVisible(true);
+			   	stepCount = 3;
+			}
+		});
+				
+		//next page
 		nextBtn5.setBounds(475, 400, 80, 30);
 		p5.add(nextBtn5);
 		nextBtn5.addActionListener(frame_page1);
@@ -1702,7 +1777,7 @@ public class main extends JFrame implements ActionListener {
 		lab3.setBounds(200, 150, 60, 20);
 		sum.setBounds(280, 150, 70, 20);
 		lab4.setBounds(200, 180, 80, 20);
-		avg.setBounds(280, 180, 70, 20);
+		avg.setBounds(280, 180, 32, 20);
 		lab5.setBounds(200, 210, 60, 20);
 		result.setBounds(280, 210, 120, 20);
 		
@@ -1739,13 +1814,13 @@ public class main extends JFrame implements ActionListener {
 		sum.setText(pointS);
 		
 		//AVG
-		average = gradeCounter / averageCount;
+		average = (double)gradeCounter / (double)averageCount;
 		String averageS = String.valueOf(average);//double to string
 		avg.setText(averageS);
 		
 		System.out.println(gradeCounter);
 		System.out.println(averageCount);
-		
+		System.out.println(average);
 		//通識門檻檢查
 		Integer Box1 = selectBox1.getSelectedIndex();
 		Integer Box2 = selectBox2.getSelectedIndex();
@@ -1777,7 +1852,8 @@ public class main extends JFrame implements ActionListener {
 			JLabel img = new JLabel(new ImageIcon("pass.png"));
 			img.setBounds(160, 280, 160, 160);
 			p6.add(img);
-			result.setForeground(Color.GREEN);
+			result.setForeground(Color.BLUE);
+			result.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
 			result.setText("通過系畢業門檻");
 		}
 		else
@@ -1786,6 +1862,7 @@ public class main extends JFrame implements ActionListener {
 			img.setBounds(160, 280, 160, 160);
 			p6.add(img);
 			result.setForeground(Color.RED);
+			result.setFont(new Font(Font.DIALOG, Font.BOLD, 12));
 			result.setText("尚未通過系畢業門檻");
 		}
 		
@@ -1797,6 +1874,7 @@ public class main extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
+		
 		if(stepCount == 0)
 			firstStep(null);
 		else if(stepCount == 1)
