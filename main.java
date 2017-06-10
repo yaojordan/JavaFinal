@@ -48,14 +48,14 @@ public class main extends JFrame implements ActionListener {
 	static Label English2Lab2 = new Label("大二英文(下)");
 	static Label HistoryLab = new Label("歷史課程");
 	static Label SocialLab = new Label("公民文化");
-	static TextField ChineseTextField1 = new TextField("60");
-	static TextField ChineseTextField2 = new TextField("60");
-	static TextField EnglishTextField1 = new TextField("60");
-	static TextField EnglishTextField2 = new TextField("60");
-	static TextField English2TextField1 = new TextField("60");
-	static TextField English2TextField2 = new TextField("60");
-	static TextField HistoryTextField = new TextField("60");
-	static TextField SocialTextField = new TextField("60");
+	static TextField ChineseTextField1 = new TextField("80");
+	static TextField ChineseTextField2 = new TextField("93");
+	static TextField EnglishTextField1 = new TextField("76");
+	static TextField EnglishTextField2 = new TextField("77");
+	static TextField English2TextField1 = new TextField("71");
+	static TextField English2TextField2 = new TextField("74");
+	static TextField HistoryTextField = new TextField("69");
+	static TextField SocialTextField = new TextField("78");
 	
 	//第三頁
 	static JComboBox selectBox1 = new JComboBox();
@@ -65,13 +65,13 @@ public class main extends JFrame implements ActionListener {
 	static JComboBox selectBox5 = new JComboBox(); 
 	static JComboBox selectBox6 = new JComboBox(); 
 	static JComboBox selectBox7 = new JComboBox(); 
-	static TextField GeneralCourse1 = new TextField("60");
-	static TextField GeneralCourse2 = new TextField("60");
-	static TextField GeneralCourse3 = new TextField("60");
-	static TextField GeneralCourse4 = new TextField("60");
-	static TextField GeneralCourse5 = new TextField("60");
-	static TextField GeneralCourse6 = new TextField("60");
-	static TextField GeneralCourse7 = new TextField("60");
+	static TextField GeneralCourse1 = new TextField("80");
+	static TextField GeneralCourse2 = new TextField("90");
+	static TextField GeneralCourse3 = new TextField("74");
+	static TextField GeneralCourse4 = new TextField("61");
+	static TextField GeneralCourse5 = new TextField("74");
+	static TextField GeneralCourse6 = new TextField("65");
+	static TextField GeneralCourse7 = new TextField("79");
 	static boolean GeneralFinish = false;//判斷是否橫跨三領域
 	
 	//必修必選
@@ -80,11 +80,11 @@ public class main extends JFrame implements ActionListener {
 	static Label PhysicsLab = new Label("普通物理");
 	static Label BCCLab = new Label("計算機概論");
 	static Label CProgrammingLab = new Label("C 程式設計");
-	static TextField CalculusTextField1 = new TextField("60");
-	static TextField CalculusTextField2 = new TextField("60");
+	static TextField CalculusTextField1 = new TextField("68");
+	static TextField CalculusTextField2 = new TextField("92");
 	static TextField PhysicsTextField = new TextField("60");
-	static TextField BCCTextField = new TextField("60");
-	static TextField CProgrammingTextField = new TextField("60");
+	static TextField BCCTextField = new TextField("77");
+	static TextField CProgrammingTextField = new TextField("93");
 	
 	static Label SoftwareLab = new Label("軟體工程概論");
 	static Label DataStructureLab = new Label("資料結構");
@@ -100,20 +100,20 @@ public class main extends JFrame implements ActionListener {
 	static Label AlgorithmLab = new Label("演算法");
 	static Label OSLab = new Label("作業系統");
 	static Label FinalProgramLab = new Label("專題實作");
-	static TextField SoftwareTextField = new TextField("60");
-	static TextField DataStructureTextField = new TextField("60");
+	static TextField SoftwareTextField = new TextField("0");
+	static TextField DataStructureTextField = new TextField("76");
 	static TextField DiscreteTextField = new TextField("60");
-	static TextField ElectricTextField = new TextField("60");
-	static TextField ElectriclabTextField = new TextField("60");
-	static TextField SystemAssemblyTextField = new TextField("60");
+	static TextField ElectricTextField = new TextField("66");
+	static TextField ElectriclabTextField = new TextField("88");
+	static TextField SystemAssemblyTextField = new TextField("65");
 	static TextField ProbabilityTextField = new TextField("60");
-	static TextField LinearAlgebraTextField = new TextField("60");
-	static TextField ProgrammingLanguageTextField = new TextField("60");
-	static TextField ComputerOrganTextField = new TextField("60");
-	static TextField ComputerInternetTextField = new TextField("60");
-	static TextField AlgorithmTextField = new TextField("60");
-	static TextField OSTextField = new TextField("60");
-	static TextField FinalProgramTextField = new TextField("60");
+	static TextField LinearAlgebraTextField = new TextField("70");
+	static TextField ProgrammingLanguageTextField = new TextField("88");
+	static TextField ComputerOrganTextField = new TextField("92");
+	static TextField ComputerInternetTextField = new TextField("79");
+	static TextField AlgorithmTextField = new TextField("66");
+	static TextField OSTextField = new TextField("78");
+	static TextField FinalProgramTextField = new TextField("89");
 	
 	static Label JavaLab = new Label("JAVA 程式設計");
 	static Label TechEngLab = new Label("科技英文閱讀寫作");
@@ -124,15 +124,15 @@ public class main extends JFrame implements ActionListener {
 	static Label SoftTestLab = new Label("軟體測試與驗證");
 	static Label FinalProgram1Lab = new Label("專題研究");
 	static Label CompilerLab = new Label("編譯器");
-	static TextField JavaTextField = new TextField("60");
-	static TextField TechEngTextField = new TextField("60");
-	static TextField OOPTextField = new TextField("60");
-	static TextField LogicTextField = new TextField("60");
-	static TextField LogiclabTextField = new TextField("60");
-	static TextField DatabaseTextField = new TextField("60");
-	static TextField SoftTestTextField = new TextField("60");
-	static TextField FinalProgram1TextField = new TextField("60");
-	static TextField CompilerTextField = new TextField("60");
+	static TextField JavaTextField = new TextField("0");
+	static TextField TechEngTextField = new TextField("94");
+	static TextField OOPTextField = new TextField("66");
+	static TextField LogicTextField = new TextField("70");
+	static TextField LogiclabTextField = new TextField("84");
+	static TextField DatabaseTextField = new TextField("74");
+	static TextField SoftTestTextField = new TextField("74");
+	static TextField FinalProgram1TextField = new TextField("87");
+	static TextField CompilerTextField = new TextField("0");
 	
 	static Label OOPDLab = new Label("物件導向分析設計");
 	static Label SMLab = new Label("軟體專案管理");//MEDI
@@ -145,31 +145,31 @@ public class main extends JFrame implements ActionListener {
 	static Label CCLab = new Label("雲端計算");//ELEC,MEDI
 	static TextField OOPDTextField = new TextField("0");
 	static TextField SMLTextField = new TextField("0");
-	static TextField WebPTextField = new TextField("0");
-	static TextField UXTextField = new TextField("0");
+	static TextField WebPTextField = new TextField("90");
+	static TextField UXTextField = new TextField("85");
 	static TextField ADSTextField = new TextField("0");
 	static TextField SLCTextField = new TextField("0");
 	static TextField UITextField = new TextField("0");
-	static TextField SSTextField = new TextField("0");
-	static TextField CCTextField = new TextField("0");
+	static TextField SSTextField = new TextField("60");
+	static TextField CCTextField = new TextField("93");
 	
 	static Label ALogicLab = new Label("進階邏輯設計");
 	static Label WifiLab = new Label("無線感測網路");//MEDI
 	static Label VLSILab = new Label("VLSI設計導論");
 	static Label EmbLab = new Label("嵌入式系統實作");
-	static Label SignalLab = new Label("數位訊號處理導論");
+	static Label SignalLab = new Label("資料分析與軟體應用");
 	static TextField ALogicTextField = new TextField("0");
 	static TextField WifiTextField = new TextField("0");
-	static TextField VLSITextField = new TextField("0");
+	static TextField VLSITextField = new TextField("63");
 	static TextField EmbTextField = new TextField("0");
-	static TextField SignalTextField = new TextField("0");
+	static TextField SignalTextField = new TextField("74");
 
 	
 	static Label CreativeLab = new Label("服務創新");
 	static Label SocialNetLab = new Label("社群網路");
 	static Label VideoLab = new Label("影像視訊處理應用");
-	static TextField CreativeTextField = new TextField("0");
-	static TextField SocialNetTextField = new TextField("0");
+	static TextField CreativeTextField = new TextField("60");
+	static TextField SocialNetTextField = new TextField("84");
 	static TextField VideoTextField = new TextField("0");
 
 	
